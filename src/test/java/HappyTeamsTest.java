@@ -1,8 +1,8 @@
 /******************************************************************************
-*  Author : cal17b Carter Leslie, wsl15a Wade Linder, and fab16b Felix Mbikogbia
+*  Author : cal17b Carter Leslie, skh16b SK Hall, and arv16a Abi Verhelle
 *  Class  : Spring 2020 CS374.01 Dr. Reeves
-*  Date   : 
-*  Task   : This is the test file for Project 1 of CS374. 
+*  Date   : 5/6/2020
+*  Task   : Project 2 - GoogleHappy 
 *
 *  Tests Team FELiXGang's edition of the Happy Teams Project.
 *

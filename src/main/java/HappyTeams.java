@@ -1,8 +1,8 @@
 /******************************************************************************
-*  Author : cal17b Carter Leslie, wsl15a Wade Linder, and fab16b Felix Mbikogbia
+*  Author : cal17b Carter Leslie, skh16b SK Hall, and arv16a Abi Verhelle
 *  Class  : Spring 2020 CS374.01 Dr. Reeves
-*  Date   : 3/4/2020
-*  Task   : Project 1 - Happy Teams
+*  Date   : 5/6/2020
+*  Task   : Project 2 - GoogleHappy
 *
 *  This program creates teams of whatever number the user specifies and then
 *  optimizes those teams so that they are the most happy. It then prints

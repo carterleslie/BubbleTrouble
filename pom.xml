@@ -8,7 +8,7 @@
   <artifactId>sample</artifactId>
   <version>1.0</version>
 
-  <name>FELiXGang</name>
+  <name>BubbleTrouble</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

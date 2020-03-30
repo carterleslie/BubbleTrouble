@@ -57,40 +57,12 @@ Test Functions
 
 Week 1
 ----------
-* Basic framework
-* Parallel matrices for people and IDs created
-* Linked ID matrices to preference arrays
-
-Week 2
-----------
-* Sort function created
-* Accepts input files
-* Swap function created
-* Fixes
-
-Week 3
-----------
-* Created a best teams function that swaps people until a truly optimal solution is made
-* Allows user-inputted files
-* Allows user-inputted command line arguements
-* Wrote twice as many more test cases
-* Bugfixing
+* 
 
 #Master Story
 ==============
 
-* Brainstorm on project structure and what it will take.
-* Write the initializers
-* Write a function that feeds data from file into the program (reading student names and preferences into the code)
-* Add matrices that store student names and preferences separately.
-* Split students into teams
-* Write a basic happiness function
-* Add more to happiness function, including the calculations of happiness, both individual and group.
-* Add swap functions
-* Write test functions
-* Debug and add more test functions
-* Finishing touches (anything that might come up during the project)
-* Write the README.md file
+* 
 
 #Inception Deck
 ================
