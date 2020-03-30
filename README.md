@@ -46,16 +46,30 @@ Meet Your Neigbors
 
 Our Solution
 ---------
+* We don't know our problem!!
 
 What keeps us up at night:
 ----
-
+* The unknowns of not knowing our customer. We need more specific. 
+* a team that not co-located 
+* Who's are customer?? 
 
 Size it up: 
 ---
+* Four or five weeks? 
+
 
 Be clear on what is going to give
 ---
+* Week one: 
+Output Adjacency Matrix
+Create somthing of value  
 
 What is it going to take:
 ---
+Week one: 
+* Adjacency Matrix - 5 Webkins 
+* Cost: 
+	- Time and energy 
+
+* team TBD after calfications from reeves 
