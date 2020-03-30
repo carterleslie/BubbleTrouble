@@ -17,7 +17,6 @@ import java.util.Random;
 
 public class GoogleHappy 
 {
-	
 	public GoogleHappy()
 	{
 
