@@ -7,29 +7,21 @@ Pitch
 Our Solution
 ---------
 
-#Glossary
-==========
+#Master Story
+==============
 
-General terms
--------------
-
-Important Functions
-----------
-
-Test Functions
----------
-
+* 1 day - Complete Master Story (2 Webkinz)
+* 5 days - User Stories (3 Webkinz)
+* 5 days - Output Adjacency Matrix (5 Webkinz)
+* 5 days - Tests Cases (5 Webkinz)
+Total Time Estimate = 5 days
+Current Webkinz Total = 1/15 Webkinz
 
 #Timeline
 ==========
 
 Week 1
 ----------
-* 
-
-#Master Story
-==============
-
 * 
 
 #Inception Deck
