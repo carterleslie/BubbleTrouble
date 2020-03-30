@@ -6,7 +6,7 @@
 *
 *  Tests Team FELiXGang's edition of the Happy Teams Project.
 *
-******************************************************************************/
+******************************************************************************
 
 import java.io.File; 
 import java.util.Scanner;
@@ -268,4 +268,4 @@ public class HappyTeamsTest
 
         int test1 = testGetIDIndex.getIDMatrixIndex(0,8); //This should fail because there is no ID at the give index.
 	}
-}
+}*/

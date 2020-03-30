@@ -9,7 +9,7 @@
 *  however many "Happy Teams" the user specifies. All team members are read
 *  from a file in csv format while output is printed by standard output.
 *
-******************************************************************************/
+******************************************************************************
 
 import java.util.*;
 import java.io.File; 
@@ -501,4 +501,4 @@ public class HappyTeams
     		l = 20;
 		HappyTeams test = new HappyTeams(str,t,v,n,l,r);
     }
-}
+}*/
