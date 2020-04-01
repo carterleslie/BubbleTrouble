@@ -1,9 +1,10 @@
 # BubbleTrouble
 Carter Leslie, SK Hall, and Abi Verhelle's project for Dr. Reeve's CS374.01 Project 2: GoogleHappy
 
-###If you are an instructer, a professor, or someone that works with teams often, you know team selection can be a hard task. That is why BubbleTrouble was made to solve the problem. The BubbleTrouble program uses sophisticated algorithms that easily assigns people in to teams, and even calculates individual and group happiness in the team. If no one is happy with the team, BubbleTrouble also has a swap algorithm that keeps swapping people in different teams until everyone is happy with their team. Creating teams has never been easier. Get BubbleTrouble team maker today!
+*If you are an instructer, a professor, or someone that works with teams often, you know team selection can be a hard task. That is why BubbleTrouble was made to solve the problem. The BubbleTrouble program uses sophisticated algorithms that easily assigns people in to teams, and even calculates individual and group happiness in the team. If no one is happy with the team, BubbleTrouble also has a swap algorithm that keeps swapping people in different teams until everyone is happy with their team. Creating teams has never been easier. Get BubbleTrouble team maker today!
 
-##Master Story
+
+Master Story
 ==============
 
 * 1 day - Complete Master Story (2 Quadcopters)
@@ -13,14 +14,14 @@ Carter Leslie, SK Hall, and Abi Verhelle's project for Dr. Reeve's CS374.01 Proj
 Total Time Estimate = 5 days
 Current Quadcopters Total = 1/15 Quadcopters
 
-##Timeline
+Timeline
 ==========
 
 Week 1
 ----------
 *
 
-##Inception Deck
+Inception Deck
 ================
 
 Why are we here? 
