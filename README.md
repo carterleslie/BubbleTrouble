@@ -19,7 +19,14 @@ Timeline
 
 Week 1
 ----------
-*
+* Complete basic documentation: Master Story, Inception Deck, Timeline, etc.
+* Create basic adjacency matrix from input of name followed by preferences
+* Complete four test cases
+
+User Stories
+=============
+
+* As a quadcopter instructor, I want to sort my students into teams where they'll be happiest.
 
 Inception Deck
 ================
