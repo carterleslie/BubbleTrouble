@@ -9,6 +9,7 @@
 ******************************************************************************/
 
 import java.util.*;
+import java.util.Collection;
 import java.io.File; 
 import java.util.Scanner;
 import java.io.FileNotFoundException;
@@ -21,33 +22,53 @@ public class GoogleHappy
 	private int numPeople;
 	private int[][] adjacencyMatrix;
 	private String[] names;
-	private String[][] preferences;
+	private String[] preferences;
+
 	public GoogleHappy()
 	{
 		Scanner scanner = new Scanner(System.in);
-    	teamSize = scanner.nextInt();
-    	numPeople = scanner.nextInt();
-    	adjacencyMatrix = new int[numPeople][numPeople];
-    	names = new String[numPeople];
-    	preferences = new String[numPeople][numPeople];
-		for(int r = 0; r < numPeople; r++)
+    	numPeople = 0;
+    	String allNamesAndPrefs = "";
+		while(scanner.hasNext())
 		{
-			for(int c = 0; c < numPeople; c++)
-			{
-				adjacencyMatrix[r][c] = scanner.nextInt();
-			}
+			allNamesAndPrefs = allNamesAndPrefs + scanner.next() + " ";
+			numPeople++;
 		}
+		adjacencyMatrix = new int[numPeople][numPeople];
+		names = new String[numPeople];
+		preferences = new String[numPeople];
+		String nameAndPrefs[] = allNamesAndPrefs.split(" ");
+		for(int i = 0; i < numPeople; i++)
+		{
+			String currPerson[] = nameAndPrefs[i].split(",",2);
+			names[i] = currPerson[0];
+			preferences[i] = currPerson[1];
+			if(currPerson[1].length() >= 0)
+	     		preferences[i] = currPerson[1];
+            else
+	     		preferences[i] = "";
+		}
+		scanner.close();
+		fillAdjacencyMatrix();
+	}
+	public void fillAdjacencyMatrix()
+	{
+		int prefNum;
+		String[] prefs;
 		for(int r = 0; r < numPeople; r++)
 		{
-			int i = 1;
-			String personAndPrefs = scanner.next();
-			String people[] = personAndPrefs.split(",");
-			names[r] = people[0];
 			for(int c = 0; c < numPeople; c++)
+				adjacencyMatrix[r][c] = 0;
+			prefs = preferences[r].split(",");
+			prefNum = prefs.length;
+			for(int i = 0; i < prefs.length; i++)
 			{
-				if(adjacencyMatrix[r][c] == 1)
+				for(int c = 0; c < numPeople; c++)
 				{
-					preferences[r][c] = people[i++];
+					if(prefs[i].equals(names[c]))
+					{
+						adjacencyMatrix[r][c] = prefNum--;
+					}
 				}
 			}
 		}
@@ -62,6 +83,10 @@ public class GoogleHappy
 			}
 			System.out.println("");
 		}
+	}
+	public int getAdjacencyMatrixIndex(int r, int c)
+	{
+		return adjacencyMatrix[r][c];
 	}
 	public static void main( String[] args )
     {

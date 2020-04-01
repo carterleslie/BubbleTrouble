@@ -1,4 +1,0 @@
-Bubba,2,3,6,5,4
-Roland,4,0,0,0,0,3
-Natasha,1,4,5,7,9,11
-Zeroaster
