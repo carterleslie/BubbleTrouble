@@ -27,6 +27,8 @@ Carter
 	- A realistic plan
 	- Rigorous testing
 
+* My strengths come from my ability to code and my love for coding. I can sit around for an entire weekend coding and have the time of my life because that's what I love to do, solving problems in a systematic way is one of my favorite things to do. I do my best to make sure I get everything done that I need to and that it's done well because my love for coding makes me only want to produce the best coding possible.
+
 SK 
 ---------
 * What are your top three strengths
