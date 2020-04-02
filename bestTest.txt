@@ -1,12 +1,5 @@
-Adam,Bree,Chase,Leo,Donald
-Bree,Chase,Adam,Leo,Donald
-Chase,Bree,Adam,Leo,Donald
-Leo,Adam,Bree,Chase,Donald
-Donald,Chase,Bree,Adam,Leo
-Perry,Douglass
-Crane
-Sebastion,Crane
-Bob,Spin,Adam,Bree,Chase,Leo,Donald
-Spin,Bob,Adam,Bree,Chase,Leo,Donald
-Douglass,Chase,Bree,Adam
-Marcus,Douglass
+Grinch,Cindy
+Cindy,grinch,Whoo,Who
+Mayor,whoo,who
+Whoo,Cindy,Mayor
+Who,Whoo,Mayor
