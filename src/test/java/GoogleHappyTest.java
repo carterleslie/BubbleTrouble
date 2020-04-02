@@ -13,6 +13,7 @@ import java.io.ByteArrayInputStream;
 import java.io.PrintStream;
 import java.io.InputStream;
 import java.io.FileInputStream;
+import java.io.*;
 
 import java.util.ArrayList;
 import java.io.IOException;
@@ -108,6 +109,7 @@ public class GoogleHappyTest
     	{
     		assertEquals(0, test.getAdjacencyMatrixIndex(6, i));
     	}
+
         String outs = outContent.toString();  
         System.out.println(outs);            
         //These two lines print the output which was output by the GoogleHappy test,

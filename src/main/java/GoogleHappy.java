@@ -87,6 +87,10 @@ public class GoogleHappy
 	{
 		return adjacencyMatrix[r][c];
 	}
+	public int getNumPeople()
+	{
+		return numPeople;
+	}
 	public static void main( String[] args )
     {
 		GoogleHappy test = new GoogleHappy();
