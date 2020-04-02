@@ -117,4 +117,167 @@ public class GoogleHappyTest
         //but eventually it will. Feel free to remove these for now.          
         
     }
+
+    @Test
+    public void TestDiagonalZeros() throws IOException 
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("bestTest.txt"); //put file name here that you want to input from
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        // now call main
+        //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
+        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        
+        // reset back to normal stdin, anything you print now will show up when running mvn test
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
+
+        for (int i = 0; i < 12; i++) 
+        {
+            assertEquals(0, test.getAdjacencyMatrixIndex(i, i));
+        }
+
+        String outs = outContent.toString();  
+        System.out.println(outs);            
+        //These two lines print the output which was output by the GoogleHappy test,
+        //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
+        //but eventually it will. Feel free to remove these for now.          
+        
+    }
+
+     @Test
+    public void TestFailDiagonalZeros() throws IOException 
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt"); //put file name here that you want to input from
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        // now call main
+        //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
+        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        
+        // reset back to normal stdin, anything you print now will show up when running mvn test
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
+
+        for (int i = 0; i < 8; i++) 
+        {
+            assertEquals(0, test.getAdjacencyMatrixIndex(i, i));
+        }
+
+        String outs = outContent.toString();  
+        System.out.println(outs);            
+        //These two lines print the output which was output by the GoogleHappy test,
+        //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
+        //but eventually it will. Feel free to remove these for now.          
+        
+    }
+
+     @Test
+    public void TestCorretnessOfMatrix() throws IOException 
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt"); //put file name here that you want to input from
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        // now call main
+        //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
+        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        
+        // reset back to normal stdin, anything you print now will show up when running mvn test
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
+
+        int val = test.getAdjacencyMatrixIndex(6, 4);
+        int ans = 5;
+        assertEquals(ans,val);
+
+        String outs = outContent.toString();  
+        System.out.println(outs);            
+        //These two lines print the output which was output by the GoogleHappy test,
+        //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
+        //but eventually it will. Feel free to remove these for now.          
+        
+    }
+
+    public void TestCorretnessOfMatrix2() throws IOException 
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("bestTest.txt"); //put file name here that you want to input from
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        // now call main
+        //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
+        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        
+        // reset back to normal stdin, anything you print now will show up when running mvn test
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
+
+        int val = test.getAdjacencyMatrixIndex(7, 9);
+        int ans = 0;
+        assertEquals(ans,val);
+
+        String outs = outContent.toString();  
+        System.out.println(outs);            
+        //These two lines print the output which was output by the GoogleHappy test,
+        //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
+        //but eventually it will. Feel free to remove these for now.          
+        
+    }
+
+    @Test
+    public void TestCorretnessOfMatrixFail() throws IOException 
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt"); //put file name here that you want to input from
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        // now call main
+        //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
+        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        
+        // reset back to normal stdin, anything you print now will show up when running mvn test
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
+
+        int val = test.getAdjacencyMatrixIndex(0, 2);
+        int ans = 7;
+        assertEquals(ans,val);
+
+        String outs = outContent.toString();  
+        System.out.println(outs);            
+        //These two lines print the output which was output by the GoogleHappy test,
+        //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
+        //but eventually it will. Feel free to remove these for now.          
+        
+    }
+
+
 }
