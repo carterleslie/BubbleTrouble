@@ -408,8 +408,8 @@ public class GoogleHappyTest
         test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
 
         int val = test.getNumPeople();
-        int ans = 4; 
-        //assertEquals(ans);// is this right?? Where is val coming from?? 
+        int ans = 5; 
+        assertEquals(ans,val);// is this right?? Where is val coming from?? 
 
         String outs = outContent.toString();  
         System.out.println(outs);            
