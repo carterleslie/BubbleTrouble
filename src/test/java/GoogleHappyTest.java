@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.io.File; 
 import java.util.Scanner;
 import java.io.FileNotFoundException;
+/*import java.io.IndexOutOfBoundsException;*/
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.*;
@@ -85,7 +86,7 @@ public class GoogleHappyTest
         
     }*/
 
-    @Test
+   @Test
     public void TestZeroPreferences() throws IOException 
     {
         this.setUpStreams();
@@ -278,6 +279,4 @@ public class GoogleHappyTest
         //but eventually it will. Feel free to remove these for now.          
         
     }
-
-
 }
