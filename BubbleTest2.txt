@@ -1,5 +1,5 @@
 Grinch,Cindy
 Cindy,grinch,Whoo,Who
 Mayor,whoo,who
-Whoo,Cindy,Mayor
-Who,Whoo,Mayor
+Whoo,Cindy
+Who,Whoo,Cindy
