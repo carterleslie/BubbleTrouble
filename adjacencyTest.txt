@@ -1,0 +1,9 @@
+Calvin,Bubba,Blinkendorfer,Suzie
+Bubba,Snoopie,Donald
+Blinkendorfer,Bubba,Billy,Ivanka
+Suzie,Ivanka,Donald
+Donald,Bubba,Ivanka,Mitch
+Mitch,Snoopie,Bubba,Suzie,Ivanka,Donald
+Snoopie,Bubba
+Billy,Donald,Blinkendorfer
+Ivanka,Donald,Billy,Suzie

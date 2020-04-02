@@ -42,8 +42,7 @@ public class GoogleHappy
 		{
 			String currPerson[] = nameAndPrefs[i].split(",",2);
 			names[i] = currPerson[0];
-			preferences[i] = currPerson[1];
-			if(currPerson[1].length() >= 0)
+			if(currPerson.length > 1)
 	     		preferences[i] = currPerson[1];
             else
 	     		preferences[i] = "";
@@ -65,7 +64,7 @@ public class GoogleHappy
 			{
 				for(int c = 0; c < numPeople; c++)
 				{
-					if(prefs[i].equals(names[c]))
+					if(prefs[i].equals(names[c]) && c != r)
 					{
 						adjacencyMatrix[r][c] = prefNum--;
 					}
@@ -91,6 +90,5 @@ public class GoogleHappy
 	public static void main( String[] args )
     {
 		GoogleHappy test = new GoogleHappy();
-		test.printAdjacencyMatrix();
 	}
 }
