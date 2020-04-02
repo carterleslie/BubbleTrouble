@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.io.File; 
 import java.util.Scanner;
 import java.io.FileNotFoundException;
-import java.io.IndexOutOfBoundsException;
+//import java.io.IndexOutOfBoundsException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.*;
@@ -52,6 +52,15 @@ public class GoogleHappyTest
 	    System.setOut(originalOut);
 	    System.setErr(originalErr);
     }
+
+    @Rule
+    public TestRule watcher = new TestWatcher() 
+    {
+    	    protected void starting(Description description) 
+    	    {
+    			System.out.println("Starting test: " + description.getMethodName());
+    	    }
+    };
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception 
@@ -118,8 +127,6 @@ public class GoogleHappyTest
         //but eventually it will. Feel free to remove these for now.          
         
     }
-   
-=======
 
     @Test
     public void TestDiagonalZeros() throws IOException 
@@ -154,7 +161,7 @@ public class GoogleHappyTest
         
     }
 
-     @Test
+    @Test(expected= AssertionError.class)
     public void TestFailDiagonalZeros() throws IOException 
     {
         this.setUpStreams();
@@ -174,11 +181,8 @@ public class GoogleHappyTest
 
         test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
 
-        for (int i = 0; i < 8; i++) 
-        {
-            assertEquals(0, test.getAdjacencyMatrixIndex(i, i));
-        }
-
+        assertEquals(1, test.getAdjacencyMatrixIndex(3, 3));
+      
         String outs = outContent.toString();  
         System.out.println(outs);            
         //These two lines print the output which was output by the GoogleHappy test,
@@ -187,7 +191,7 @@ public class GoogleHappyTest
         
     }
 
-     @Test
+    @Test
     public void TestCorretnessOfMatrix() throws IOException 
     {
         this.setUpStreams();
@@ -219,6 +223,7 @@ public class GoogleHappyTest
         
     }
 
+    @Test
     public void TestCorretnessOfMatrix2() throws IOException 
     {
         this.setUpStreams();
@@ -250,7 +255,7 @@ public class GoogleHappyTest
         
     }
 
-    @Test
+    @Test(expected= AssertionError.class)
     public void TestCorretnessOfMatrixFail() throws IOException 
     {
         this.setUpStreams();
