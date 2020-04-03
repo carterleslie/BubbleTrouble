@@ -213,7 +213,13 @@ public class GoogleHappyTest
 
         int val = test.getAdjacencyMatrixIndex(6, 4);
         int ans = 5;
+        int val2 = test.getAdjacencyMatrixIndex(1, 2);
+        int ans2 = 3;
+        int val3 = test.getAdjacencyMatrixIndex(5, 0);
+        int ans3 = 0;
         assertEquals(ans,val);
+        assertEquals(ans2,val2);
+        assertEquals(ans3,val3);
 
         String outs = outContent.toString();  
         System.out.println(outs);            
@@ -245,7 +251,13 @@ public class GoogleHappyTest
 
         int val = test.getAdjacencyMatrixIndex(7, 9);
         int ans = 0;
+        int val2 = test.getAdjacencyMatrixIndex(0, 1);
+        int ans2 = 4;
+        int val3 = test.getAdjacencyMatrixIndex(4, 5);
+        int ans3 = 0;
         assertEquals(ans,val);
+        assertEquals(ans2,val2);
+        assertEquals(ans3,val3);
 
         String outs = outContent.toString();  
         System.out.println(outs);            

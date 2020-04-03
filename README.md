@@ -12,7 +12,7 @@ Master Story
 * 5 days - Output Adjacency Matrix (5 Quadcopters)
 * 5 days - Tests Cases (5 Quadcopters)
 Total Time Estimate = 5 days
-Current Quadcopters Total = 1/15 Quadcopters
+Current Quadcopters Total = 15/15 Quadcopters
 
 Timeline
 ==========
@@ -21,7 +21,7 @@ Week 1
 ----------
 * Complete basic documentation: Master Story, Inception Deck, Timeline, etc.
 * Create basic adjacency matrix from input of name followed by preferences
-* Complete four test cases
+* Complete 10 test cases
 
 User Stories
 =============
