@@ -299,8 +299,7 @@ public class GoogleHappyTest
         
    }
 
-    //@Test(expected= AssertionError.class) 
-   @Test(expected= IndexOutOfBoundsException.class) 
+    @Test(expected= IndexOutOfBoundsException.class) 
     public void TestRange() throws IOException
     {
         this.setUpStreams();

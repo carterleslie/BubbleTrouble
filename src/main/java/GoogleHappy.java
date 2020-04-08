@@ -49,7 +49,9 @@ public class GoogleHappy
 		}
 		scanner.close();
 		fillAdjacencyMatrix();
+		PageRank p = new PageRank(adjacencyMatrix, numPeople);
 	}
+
 	public void fillAdjacencyMatrix()
 	{
 		int prefNum;
