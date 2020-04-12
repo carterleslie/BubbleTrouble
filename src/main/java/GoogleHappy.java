@@ -19,13 +19,21 @@ import java.util.Random;
 public class GoogleHappy 
 {
 	private int teamSize;
+	private int verbose;
 	private int numPeople;
 	private int[][] adjacencyMatrix;
 	private String[] names;
 	private String[] preferences;
+	private PageRank p;
 
-	public GoogleHappy()
-	{
+	public GoogleHappy(int tSize, int vLevel)
+	{	
+		if(vLevel <= 4 && vLevel >= 0)
+    		verbose = vLevel;
+    	else if (vLevel < 0)
+    		verbose = 0;
+    	else
+			verbose = 4;
 		Scanner scanner = new Scanner(System.in);
     	numPeople = 0;
     	String allNamesAndPrefs = "";
@@ -34,6 +42,12 @@ public class GoogleHappy
 			allNamesAndPrefs = allNamesAndPrefs + scanner.next() + " ";
 			numPeople++;
 		}
+		if(tSize >= 2 && tSize <= numPeople/2)
+    		teamSize = tSize;
+    	else if(tSize < 2)
+    		teamSize = 2;
+    	else
+    		teamSize = numPeople/2;
 		adjacencyMatrix = new int[numPeople][numPeople];
 		names = new String[numPeople];
 		preferences = new String[numPeople];
@@ -49,7 +63,7 @@ public class GoogleHappy
 		}
 		scanner.close();
 		fillAdjacencyMatrix();
-		PageRank p = new PageRank(adjacencyMatrix, numPeople);
+		p = new PageRank(adjacencyMatrix, numPeople);
 	}
 
 	public void fillAdjacencyMatrix()
@@ -93,8 +107,45 @@ public class GoogleHappy
 	{
 		return numPeople;
 	}
+	public int getTeamSize()
+	{
+		return teamSize;
+	}
+	public int getVerboseLevel()
+	{
+		return verbose;
+	}
+	public PageRank getPageRank()
+	{
+		return p;
+	}
 	public static void main( String[] args )
     {
-		GoogleHappy test = new GoogleHappy();
+    	int t = 3;
+        int v = 0;
+    	if (args.length > 0)//parses in all the commandline args and handles setting the 
+    	{                   //numbers they correspond to accordingly 
+            for (int i = 0; i < args.length; i++) 
+            {
+            	if(args[i].equals("-t"))
+            	{
+            		i++;
+            		if(i < args.length && !args[i].equals("-t") && !args[i].equals("-v"))
+            			t = Integer.parseInt(args[i]);
+            		else
+            			i--;
+            	}
+            	if(args[i].equals("-v"))
+            	{
+            		i++;
+            		if(i < args.length && !args[i].equals("-t") && !args[i].equals("-v"))
+            			v = Integer.parseInt(args[i]);
+            		else
+            			i--;
+            	}
+            }
+        } 
+		GoogleHappy test = new GoogleHappy(t, v);
+		//test.printAdjacencyMatrix();
 	}
 }

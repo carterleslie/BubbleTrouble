@@ -107,7 +107,7 @@ public class GoogleHappyTest
     	
         // now call main
         //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
     	
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -120,8 +120,9 @@ public class GoogleHappyTest
     		assertEquals(0, test.getAdjacencyMatrixIndex(6, i));
     	}
 
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -140,7 +141,7 @@ public class GoogleHappyTest
         
         // now call main
         //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
         
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -153,8 +154,9 @@ public class GoogleHappyTest
             assertEquals(0, test.getAdjacencyMatrixIndex(i, i));
         }
 
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -173,7 +175,7 @@ public class GoogleHappyTest
         
         // now call main
         //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
         
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -183,8 +185,9 @@ public class GoogleHappyTest
 
         assertEquals(1, test.getAdjacencyMatrixIndex(3, 3));
       
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -203,7 +206,7 @@ public class GoogleHappyTest
         
         // now call main
         //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
         
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -221,8 +224,9 @@ public class GoogleHappyTest
         assertEquals(ans2,val2);
         assertEquals(ans3,val3);
 
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -241,7 +245,7 @@ public class GoogleHappyTest
         
         // now call main
         //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
         
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -259,8 +263,9 @@ public class GoogleHappyTest
         assertEquals(ans2,val2);
         assertEquals(ans3,val3);
 
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -279,7 +284,7 @@ public class GoogleHappyTest
         
         // now call main
         //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
         
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -291,8 +296,9 @@ public class GoogleHappyTest
         int ans = 7;
         assertEquals(ans,val);
 
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -311,7 +317,7 @@ public class GoogleHappyTest
         
         // now call main
         //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
         
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -323,8 +329,9 @@ public class GoogleHappyTest
         int ans = 0; 
         assertEquals(ans,val);
 
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -344,7 +351,7 @@ public class GoogleHappyTest
         
         // now call main
         //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
         
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -356,8 +363,9 @@ public class GoogleHappyTest
         int ans = 0; 
         assertEquals(ans,val);
 
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -375,8 +383,8 @@ public class GoogleHappyTest
         System.setIn(targetStream);
         
         // now call main
-        //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
+        //GoogleHappy.main( new String[] { "-v", "4", "-t", "2"} ); //sends in these variables to args of the main
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
         
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
@@ -389,8 +397,9 @@ public class GoogleHappyTest
             assertEquals(0, test.getAdjacencyMatrixIndex(i, 2));
         }
 
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
@@ -398,37 +407,67 @@ public class GoogleHappyTest
     }
 
     //@Test(expected= AssertionError.class) 
-   @Test
+    @Test
     public void TestTeamSize() throws IOException
     {
         this.setUpStreams();
 
-        File inputFile = new File("bubbleTest2.txt"); //put file name here that you want to input from
+        File inputFile = new File("bestTest.txt"); //put file name here that you want to input from
         
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
         
         // now call main
-        //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
-        
+        GoogleHappy test = new GoogleHappy(3,0); //creating a GoogleHappy
+        //GoogleHappy.main( new String[] { "-v", "3", "-t", "7"} ); //sends in these variables to args of the main
+
         // reset back to normal stdin, anything you print now will show up when running mvn test
         System.setIn(System.in);
         this.restoreStreams();
 
         test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
 
-        int val = test.getNumPeople();
-        int ans = 5; 
-        assertEquals(ans,val);// is this right?? Where is val coming from?? 
+        int val = test.getTeamSize();
+        int ans = 3; 
+        assertEquals(ans,val);
 
-        String outs = outContent.toString();  
-        System.out.println(outs);            
+        //String outs = outContent.toString();  
+        //System.out.println(outs);
+        //^^^^            
         //These two lines print the output which was output by the GoogleHappy test,
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now.          
         
     }
 
+    @Test
+    public void TestFinalPageRank() throws IOException
+    {
+        this.setUpStreams();
 
+        File inputFile = new File("pageRankTest.txt"); //put file name here that you want to input from
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        // now call main
+        GoogleHappy test = new GoogleHappy(2,0); //creating a GoogleHappy
+        //GoogleHappy.main( new String[] { "-v", "3", "-t", "7"} ); //sends in these variables to args of the main
+
+        // reset back to normal stdin, anything you print now will show up when running mvn test
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        //test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
+
+        double val = (test.getPageRank()).getTotalPageRank(); //(test.getPageRank()) is the PageRank object of test
+                                                              //so you must call it to then call PageRank methods
+        int ans = 1; 
+        assertTrue(Math.abs(Math.abs(val)-Math.abs(ans)) < .0001); //tests to make sure the absolute difference
+                                                                   //between val and ans is small, so the doubles
+                                                                   //are basically the same
+
+        String outs = outContent.toString();  //these print the page rank stuff, comment them out to get rid of it
+        System.out.println(outs);
+    }
 }
