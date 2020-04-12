@@ -100,7 +100,7 @@ public class GoogleHappyTest
     {
         this.setUpStreams();
 
-        File inputFile = new File("labRats.txt"); //put file name here that you want to input from
+        File inputFile = new File("labRatsTest.txt"); //put file name here that you want to input from
         
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
@@ -134,7 +134,7 @@ public class GoogleHappyTest
     {
         this.setUpStreams();
 
-        File inputFile = new File("labRats.txt"); //put file name here that you want to input from
+        File inputFile = new File("labRatsTest.txt"); //put file name here that you want to input from
         
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
@@ -238,7 +238,7 @@ public class GoogleHappyTest
     {
         this.setUpStreams();
 
-        File inputFile = new File("labRats.txt"); //put file name here that you want to input from
+        File inputFile = new File("labRatsTest.txt"); //put file name here that you want to input from
         
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
@@ -412,7 +412,7 @@ public class GoogleHappyTest
     {
         this.setUpStreams();
 
-        File inputFile = new File("labRats.txt"); //put file name here that you want to input from
+        File inputFile = new File("labRatsTest.txt"); //put file name here that you want to input from
         
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
