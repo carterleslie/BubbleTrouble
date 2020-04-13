@@ -24,6 +24,7 @@ Week 1
 * Complete basic documentation: Master Story, Inception Deck, Timeline, etc.
 * Create basic adjacency matrix from input of name followed by preferences
 * Complete 10 test cases
+* Team Contributions: Carter 40%, Abi 30%, SK 30%
 
 Week 2
 ----------
@@ -31,6 +32,7 @@ Week 2
 * Begin weighting pages with test outputs: after nth step each individual page's rank weight and page rank total
 * Update basic documentation: Master Story, Inception Deck, Timeline, etc.
 * Complete 10 more test cases
+* Team Contributions: Carter 60%, Abi 20%, SK 20%
 
 User Stories
 =============
