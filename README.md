@@ -8,11 +8,13 @@ Master Story
 ==============
 
 * 1 day - Complete Master Story (2 Quadcopters)
+* 1 day - Create Storyboard & Release Wall (4 Quadcopters)
 * 5 days - User Stories (3 Quadcopters)
 * 5 days - Output Adjacency Matrix (5 Quadcopters)
-* 5 days - Tests Cases (5 Quadcopters)
-Total Time Estimate = 5 days
-Current Quadcopters Total = 15/15 Quadcopters
+* 5 days - Weight Pages (5 Quadcopters)
+* 10 days - Tests Cases (10 Quadcopters)
+Total Time Estimate = 10 days
+Current Quadcopters Total = 29/29 Quadcopters
 
 Timeline
 ==========
@@ -22,6 +24,13 @@ Week 1
 * Complete basic documentation: Master Story, Inception Deck, Timeline, etc.
 * Create basic adjacency matrix from input of name followed by preferences
 * Complete 10 test cases
+
+Week 2
+----------
+* Create release wall and storyboard
+* Begin weighting pages with test outputs: after nth step each individual page's rank weight and page rank total
+* Update basic documentation: Master Story, Inception Deck, Timeline, etc.
+* Complete 10 more test cases
 
 User Stories
 =============
