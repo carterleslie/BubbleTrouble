@@ -605,5 +605,123 @@ public class GoogleHappyTest
         System.out.println(outs);
     }
 
+    @Test
+    public void Testverbose2() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,1); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 1; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    @Test
+    public void Testverbose3() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,2); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 2; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    @Test
+    public void Testverbose4() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,3); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 3; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    @Test
+    public void Testverbose5() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,4); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 4; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    
+
+    @Test (expected= AssertionError.class)
+    public void Testverbose6() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,4); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 5; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+
 
 }
