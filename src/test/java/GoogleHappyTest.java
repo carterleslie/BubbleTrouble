@@ -533,7 +533,7 @@ public class GoogleHappyTest
     }
 
     @Test
-    public void Testverbose1() throws IOException
+    public void TestVerbose1() throws IOException
     {
         this.setUpStreams();
 
