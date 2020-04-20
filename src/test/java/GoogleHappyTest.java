@@ -716,7 +716,7 @@ public class GoogleHappyTest
     }
 
     @Test (expected= AssertionError.class)
-    public void numNodesVsPeople1() throws IOException
+    public void numNodesVsPeopleFails1() throws IOException
     {
         this.setUpStreams();
 
