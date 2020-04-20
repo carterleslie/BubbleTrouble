@@ -93,7 +93,7 @@ public class GoogleHappyTest
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now            
         
-    } 
+    }*/
 
    @Test
     public void TestZeroPreferences() throws IOException 
@@ -580,7 +580,7 @@ public class GoogleHappyTest
 
         String outs = outContent.toString();  
         System.out.println(outs);
-    }*/
+    }
 
     @Test
     public void Testverbose1() throws IOException
@@ -709,7 +709,7 @@ public class GoogleHappyTest
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
         
-        GoogleHappy test = new GoogleHappy(2,4); 
+        GoogleHappy test = new GoogleHappy(2,5); 
         
         System.setIn(System.in);
         this.restoreStreams();
