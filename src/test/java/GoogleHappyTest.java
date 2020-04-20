@@ -696,7 +696,6 @@ public class GoogleHappyTest
         String outs = outContent.toString();  
         System.out.println(outs);
     }
-
     
 
     @Test (expected= AssertionError.class)
@@ -722,6 +721,160 @@ public class GoogleHappyTest
         System.out.println(outs);
     }
 
+    public void Testverbose7() throws IOException
+    {
+        this.setUpStreams();
 
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,4); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 4; 
+        assertEquals(ans1,val1); 
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    public void Testverbose8() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,3); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 3; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    public void Testverbose9() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,2); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 2; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    public void Testverbose10() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,1); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 1; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    public void Testverbose11() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,0); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 0; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    @Test (expected= AssertionError.class)
+    public void Testverbose12() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,0); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getVerboseLevel(); 
+        int ans1 = 1; 
+        assertEquals(ans1,val1); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
+
+    @Test (expected= AssertionError.class)
+    public void NodesVsPeople1() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,0); 
+        PageRank ranking = new PageRank(test,7);
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int people = test.getNumPeople(); 
+        //double nodes = ranking.getNumNodes(); 
+        assertEquals(people,7); 
+
+        String outs = outContent.toString();  
+        System.out.println(outs);
+    }
 
 }
