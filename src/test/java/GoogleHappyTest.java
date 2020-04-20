@@ -110,8 +110,6 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-    	test.printAdjacencyMatrix();
-
     	for (int i = 0; i < 12; i++) 
     	{
     		assertEquals(0, test.getAdjacencyMatrixIndex(6, i));
@@ -132,8 +130,6 @@ public class GoogleHappyTest
         
         System.setIn(System.in);
         this.restoreStreams();
-
-        test.printAdjacencyMatrix();
 
         for (int i = 0; i < 12; i++) 
         {
@@ -156,8 +152,6 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-        test.printAdjacencyMatrix();
-
         assertEquals(1, test.getAdjacencyMatrixIndex(3, 3));       
     }
 
@@ -175,8 +169,6 @@ public class GoogleHappyTest
         
         System.setIn(System.in);
         this.restoreStreams();
-
-        test.printAdjacencyMatrix();
 
         int val = test.getAdjacencyMatrixIndex(6, 4);
         int ans = 5;
@@ -204,8 +196,6 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-        test.printAdjacencyMatrix();
-
         int val = test.getAdjacencyMatrixIndex(7, 9);
         int ans = 0;
         int val2 = test.getAdjacencyMatrixIndex(0, 1);
@@ -232,8 +222,6 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-        test.printAdjacencyMatrix();
-
         int val = test.getAdjacencyMatrixIndex(0, 2);
         int ans = 7;
         assertEquals(ans,val);    
@@ -253,8 +241,6 @@ public class GoogleHappyTest
         
         System.setIn(System.in);
         this.restoreStreams();
-
-        test.printAdjacencyMatrix();
 
         int val = test.getAdjacencyMatrixIndex(0, 12);
         int ans = 0; 
@@ -276,8 +262,6 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-        test.printAdjacencyMatrix();
-
         int val = test.getAdjacencyMatrixIndex(1, 12);
         int ans = 0; 
         assertEquals(ans,val);        
@@ -297,8 +281,6 @@ public class GoogleHappyTest
         
         System.setIn(System.in);
         this.restoreStreams();
-
-        test.printAdjacencyMatrix();
 
         for (int i = 0; i < 5; i++) 
         {
@@ -320,8 +302,6 @@ public class GoogleHappyTest
 
         System.setIn(System.in);
         this.restoreStreams();
-
-        test.printAdjacencyMatrix();
 
         int val = test.getTeamSize();
         int ans = 3; 
@@ -346,9 +326,6 @@ public class GoogleHappyTest
         double val = (test.getPageRank()).getTotalPageRank();
         int ans = 1; 
         assertTrue(Math.abs(Math.abs(val)-Math.abs(ans)) < .0001);
-
-        String outs = outContent.toString();
-        System.out.println(outs);
     }
 
     @Test
@@ -369,9 +346,6 @@ public class GoogleHappyTest
         double val = (test.getPageRank()).getTotalPageRank();
         int ans = 1; 
         assertTrue(Math.abs(Math.abs(val)-Math.abs(ans)) < .0001);
-
-        String outs = outContent.toString();
-        System.out.println(outs);
     }
 
     @Test
@@ -392,9 +366,6 @@ public class GoogleHappyTest
         double val = (test.getPageRank()).getTotalPageRank();
         double ans = .83333333; 
         assertTrue(Math.abs(Math.abs(val)-Math.abs(ans)) < .0001);
-
-        String outs = outContent.toString();
-        System.out.println(outs);
     }
 
     @Test
@@ -415,9 +386,6 @@ public class GoogleHappyTest
         double val = (test.getPageRank()).getTotalPageRank();
         double ans = .83928571; 
         assertTrue(Math.abs(Math.abs(val)-Math.abs(ans)) < .0001);
-
-        String outs = outContent.toString();
-        System.out.println(outs);
     }
 
     @Test(expected= AssertionError.class)
@@ -438,9 +406,6 @@ public class GoogleHappyTest
         double val = (test.getPageRank()).getTotalPageRank();
         int ans = 1; 
         assertTrue(Math.abs(Math.abs(val)-Math.abs(ans)) < .0001);
-
-        String outs = outContent.toString();
-        System.out.println(outs);
     }
 
     @Test(expected= AssertionError.class)
@@ -461,9 +426,6 @@ public class GoogleHappyTest
         double val = (test.getPageRank()).getTotalPageRank(); 
         double ans = .85; 
         assertTrue(Math.abs(Math.abs(val)-Math.abs(ans)) < .0001); 
-
-        String outs = outContent.toString();
-        System.out.println(outs);
     }
 
     @Test
@@ -492,9 +454,6 @@ public class GoogleHappyTest
         double val3 = (test.getPageRank()).getPageRankAt(9);
         double ans3 = 0.0068027; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
-
-        String outs = outContent.toString();
-        System.out.println(outs);
     }
 
     @Test
@@ -523,9 +482,6 @@ public class GoogleHappyTest
         double val3 = (test.getPageRank()).getPageRankAt(8);
         double ans3 = 0.124691358; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
     }
 
     @Test
@@ -554,9 +510,6 @@ public class GoogleHappyTest
         double val3 = (test.getPageRank()).getPageRankAt(5);
         double ans3 = 0.046003401; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
-
-        String outs = outContent.toString();
-        System.out.println(outs);
     }
 
     @Test(expected= AssertionError.class)
@@ -576,10 +529,7 @@ public class GoogleHappyTest
 
         double val1 = (test.getPageRank()).getPageRankAt(0); 
         double ans1 = 0.083333333; 
-        assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001);
     }
 
     @Test
@@ -599,14 +549,11 @@ public class GoogleHappyTest
 
         int val1 = test.getVerboseLevel(); 
         int ans1 = 0; 
-        assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        assertEquals(ans1,val1);
     }
 
     @Test
-    public void Testverbose2() throws IOException
+    public void TestVerbose2() throws IOException
     {
         this.setUpStreams();
 
@@ -622,14 +569,11 @@ public class GoogleHappyTest
 
         int val1 = test.getVerboseLevel(); 
         int ans1 = 1; 
-        assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        assertEquals(ans1,val1);
     }
 
     @Test
-    public void Testverbose3() throws IOException
+    public void TestVerbose3() throws IOException
     {
         this.setUpStreams();
 
@@ -645,14 +589,11 @@ public class GoogleHappyTest
 
         int val1 = test.getVerboseLevel(); 
         int ans1 = 2; 
-        assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        assertEquals(ans1,val1);
     }
 
     @Test
-    public void Testverbose4() throws IOException
+    public void TestVerbose4() throws IOException
     {
         this.setUpStreams();
 
@@ -668,14 +609,11 @@ public class GoogleHappyTest
 
         int val1 = test.getVerboseLevel(); 
         int ans1 = 3; 
-        assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        assertEquals(ans1,val1);
     }
 
     @Test
-    public void Testverbose5() throws IOException
+    public void TestVerbose5() throws IOException
     {
         this.setUpStreams();
 
@@ -692,14 +630,11 @@ public class GoogleHappyTest
         int val1 = test.getVerboseLevel(); 
         int ans1 = 4; 
         assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
     }
     
 
     @Test (expected= AssertionError.class)
-    public void Testverbose6() throws IOException
+    public void TestVerboseFails1() throws IOException
     {
         this.setUpStreams();
 
@@ -716,12 +651,10 @@ public class GoogleHappyTest
         int val1 = test.getVerboseLevel(); 
         int ans1 = 5; 
         assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
     }
 
-    public void Testverbose7() throws IOException
+    @Test
+    public void TestVerbose7() throws IOException
     {
         this.setUpStreams();
 
@@ -737,12 +670,10 @@ public class GoogleHappyTest
 
         int val1 = test.getVerboseLevel(); 
         int ans1 = 4; 
-        assertEquals(ans1,val1); 
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        assertEquals(ans1,val1);
     }
-
-    public void Testverbose8() throws IOException
+    @Test
+    public void TestVerbose8() throws IOException
     {
         this.setUpStreams();
 
@@ -759,12 +690,9 @@ public class GoogleHappyTest
         int val1 = test.getVerboseLevel(); 
         int ans1 = 3; 
         assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
     }
-
-    public void Testverbose9() throws IOException
+    @Test
+    public void TestVerbose9() throws IOException
     {
         this.setUpStreams();
 
@@ -780,13 +708,10 @@ public class GoogleHappyTest
 
         int val1 = test.getVerboseLevel(); 
         int ans1 = 2; 
-        assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        assertEquals(ans1,val1);
     }
-
-    public void Testverbose10() throws IOException
+    @Test
+    public void TestVerbose10() throws IOException
     {
         this.setUpStreams();
 
@@ -803,12 +728,9 @@ public class GoogleHappyTest
         int val1 = test.getVerboseLevel(); 
         int ans1 = 1; 
         assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
     }
-
-    public void Testverbose11() throws IOException
+    @Test
+    public void TestVerbose11() throws IOException
     {
         this.setUpStreams();
 
@@ -825,13 +747,10 @@ public class GoogleHappyTest
         int val1 = test.getVerboseLevel(); 
         int ans1 = 0; 
         assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
     }
 
     @Test (expected= AssertionError.class)
-    public void Testverbose12() throws IOException
+    public void TestVerbose12() throws IOException
     {
         this.setUpStreams();
 
@@ -848,13 +767,10 @@ public class GoogleHappyTest
         int val1 = test.getVerboseLevel(); 
         int ans1 = 1; 
         assertEquals(ans1,val1); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
     }
 
     @Test (expected= AssertionError.class)
-    public void NodesVsPeople1() throws IOException
+    public void numNodesVsPeople1() throws IOException
     {
         this.setUpStreams();
 
@@ -864,17 +780,14 @@ public class GoogleHappyTest
         System.setIn(targetStream);
         
         GoogleHappy test = new GoogleHappy(2,0); 
-        PageRank ranking = new PageRank(test,7);
         
         System.setIn(System.in);
         this.restoreStreams();
 
-        int people = test.getNumPeople(); 
-        //double nodes = ranking.getNumNodes(); 
-        assertEquals(people,7); 
-
-        String outs = outContent.toString();  
-        System.out.println(outs);
+        int peopleInGoogleHappy = test.getNumPeople(); 
+        assertEquals(peopleInGoogleHappy,7);
+        int peopleInPageRank = test.getPageRank().getNumNodes(); 
+        assertEquals(peopleInPageRank, 7);
+        assertEquals(peopleInGoogleHappy, peopleInPageRank);
     }
-
 }

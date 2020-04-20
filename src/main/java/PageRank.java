@@ -111,6 +111,10 @@ public class PageRank {
 	{
 		return totalRank;
 	}
+	public int getNumNodes()
+	{
+		return numNodes;
+	}
 	public void calcTotalRank()
 	{
 		totalRank = 0;
