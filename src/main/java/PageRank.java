@@ -102,14 +102,11 @@ public class PageRank {
 			System.out.printf(" Page Rank of "+(i+1)+" is :\t"+this.pagerank[i]+"\n"); 
 		}
 		calcTotalRank();
-	  
 	}    
-
-	public double getPageRank(int index)
+	public double getPageRankAt(int index)
 	{
 		return pagerank[index];
 	}
-
 	public double getTotalPageRank()
 	{
 		return totalRank;
