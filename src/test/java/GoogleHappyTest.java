@@ -653,123 +653,7 @@ public class GoogleHappyTest
         assertEquals(ans1,val1); 
     }
 
-    @Test
-    public void TestVerbose7() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("suiteLifeTest.txt");
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-        
-        GoogleHappy test = new GoogleHappy(2,4); 
-        
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val1 = test.getVerboseLevel(); 
-        int ans1 = 4; 
-        assertEquals(ans1,val1);
-    }
-    @Test
-    public void TestVerbose8() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("suiteLifeTest.txt");
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-        
-        GoogleHappy test = new GoogleHappy(2,3); 
-        
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val1 = test.getVerboseLevel(); 
-        int ans1 = 3; 
-        assertEquals(ans1,val1); 
-    }
-    @Test
-    public void TestVerbose9() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("suiteLifeTest.txt");
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-        
-        GoogleHappy test = new GoogleHappy(2,2); 
-        
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val1 = test.getVerboseLevel(); 
-        int ans1 = 2; 
-        assertEquals(ans1,val1);
-    }
-    @Test
-    public void TestVerbose10() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("suiteLifeTest.txt");
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-        
-        GoogleHappy test = new GoogleHappy(2,1); 
-        
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val1 = test.getVerboseLevel(); 
-        int ans1 = 1; 
-        assertEquals(ans1,val1); 
-    }
-    @Test
-    public void TestVerbose11() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("suiteLifeTest.txt");
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-        
-        GoogleHappy test = new GoogleHappy(2,0); 
-        
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val1 = test.getVerboseLevel(); 
-        int ans1 = 0; 
-        assertEquals(ans1,val1); 
-    }
-
-    @Test (expected= AssertionError.class)
-    public void TestVerbose12() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("suiteLifeTest.txt");
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-        
-        GoogleHappy test = new GoogleHappy(2,0); 
-        
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val1 = test.getVerboseLevel(); 
-        int ans1 = 1; 
-        assertEquals(ans1,val1); 
-    }
-
-    @Test (expected= AssertionError.class)
+   
     public void numNodesVsPeople1() throws IOException
     {
         this.setUpStreams();
@@ -780,14 +664,139 @@ public class GoogleHappyTest
         System.setIn(targetStream);
         
         GoogleHappy test = new GoogleHappy(2,0); 
-        
         System.setIn(System.in);
         this.restoreStreams();
 
         int peopleInGoogleHappy = test.getNumPeople(); 
-        assertEquals(peopleInGoogleHappy,7);
+        assertEquals(peopleInGoogleHappy,8);
         int peopleInPageRank = test.getPageRank().getNumNodes(); 
-        assertEquals(peopleInPageRank, 7);
+        assertEquals(peopleInPageRank, 8);
         assertEquals(peopleInGoogleHappy, peopleInPageRank);
     }
+
+   
+    public void numNodesVsPeople2() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(3,4); 
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int peopleInGoogleHappy = test.getNumPeople(); 
+        assertEquals(peopleInGoogleHappy,12);
+        int peopleInPageRank = test.getPageRank().getNumNodes(); 
+        assertEquals(peopleInPageRank, 12);
+        assertEquals(peopleInGoogleHappy, peopleInPageRank);
+    }
+
+    public void numNodesVsPeople3() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("sampleTeam.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(4,1); 
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int peopleInGoogleHappy = test.getNumPeople(); 
+        assertEquals(peopleInGoogleHappy,4);
+        int peopleInPageRank = test.getPageRank().getNumNodes(); 
+        assertEquals(peopleInPageRank, 4);
+        assertEquals(peopleInGoogleHappy, peopleInPageRank);
+    }
+
+    @Test (expected= AssertionError.class)
+    public void numNodesVsPeople4() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,3); 
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int peopleInGoogleHappy = test.getNumPeople(); 
+        assertEquals(peopleInGoogleHappy,4);
+        int peopleInPageRank = test.getPageRank().getNumNodes(); 
+        assertEquals(peopleInPageRank,4);
+        assertEquals(peopleInGoogleHappy, peopleInPageRank);
+    }
+
+    @Test (expected= AssertionError.class)
+    public void numNodesVsPeople5() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(3,3); 
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int peopleInGoogleHappy = test.getNumPeople(); 
+        assertEquals(peopleInGoogleHappy,6);
+        int peopleInPageRank = test.getPageRank().getNumNodes(); 
+        assertEquals(peopleInPageRank,6);
+        assertEquals(peopleInGoogleHappy, peopleInPageRank);
+    }
+
+    @Test (expected= AssertionError.class)
+    public void numNodesVsPeople6() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(4,5); 
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int peopleInGoogleHappy = test.getNumPeople(); 
+        assertEquals(peopleInGoogleHappy,11);
+        int peopleInPageRank = test.getPageRank().getNumNodes(); 
+        assertEquals(peopleInPageRank,11);
+        assertEquals(peopleInGoogleHappy, peopleInPageRank);
+    }
+
+    @Test (expected= AssertionError.class)
+    public void numNodesVsPeople7() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("sampleTeam.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,3); 
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int peopleInGoogleHappy = test.getNumPeople(); 
+        assertEquals(peopleInGoogleHappy,5);
+        int peopleInPageRank = test.getPageRank().getNumNodes(); 
+        assertEquals(peopleInPageRank,5);
+        assertEquals(peopleInGoogleHappy, peopleInPageRank);
+    }
+
 }
