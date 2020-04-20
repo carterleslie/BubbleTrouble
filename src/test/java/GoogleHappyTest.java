@@ -716,7 +716,7 @@ public class GoogleHappyTest
     }
 
     @Test (expected= AssertionError.class)
-    public void numNodesVsPeople4() throws IOException
+    public void numNodesVsPeople1() throws IOException
     {
         this.setUpStreams();
 
@@ -737,7 +737,7 @@ public class GoogleHappyTest
     }
 
     @Test (expected= AssertionError.class)
-    public void numNodesVsPeopleFails1() throws IOException
+    public void numNodesVsPeopleFails2() throws IOException
     {
         this.setUpStreams();
 
@@ -758,7 +758,7 @@ public class GoogleHappyTest
     }
 
     @Test (expected= AssertionError.class)
-    public void numNodesVsPeopleFails2() throws IOException
+    public void numNodesVsPeopleFails3() throws IOException
     {
         this.setUpStreams();
 
@@ -779,7 +779,7 @@ public class GoogleHappyTest
     }
 
     @Test (expected= AssertionError.class)
-    public void numNodesVsPeopleFails3() throws IOException
+    public void numNodesVsPeopleFails4() throws IOException
     {
         this.setUpStreams();
 
