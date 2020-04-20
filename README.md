@@ -34,10 +34,24 @@ Week 2
 * Complete 10 more test cases
 * Team Contributions: Carter 60%, Abi 20%, SK 20%
 
+Week 3
+----------
+* Update release wall and storyboard
+* Complete linear page rank
+* Update basic documentation: Master Story, Inception Deck, Timeline, etc.
+* Complete 10 more test cases
+* Team Contributions: Carter 60%, Abi 20%, SK 20%
+
 User Stories
 =============
 
 * As a quadcopter instructor, I want to sort my students into teams where they'll be happiest.
+
+Release Wall
+==============
+
+Here is the link to our project release wall which is located on Yodiz.
+* https://app.yodiz.com/plan/pages/board.vz?cid=47758#/releases
 
 Inception Deck
 ================
