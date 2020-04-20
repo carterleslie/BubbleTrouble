@@ -307,7 +307,7 @@ public class GoogleHappyTest
     }
 
     @Test
-    public void TestTeamSize() throws IOException
+    public void TestTeamSize1() throws IOException
     {
         this.setUpStreams();
 
@@ -481,15 +481,15 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-        double val1 = (test.getPageRank()).getPageRank(0); 
+        double val1 = (test.getPageRank()).getPageRankAt(0); 
         double ans1 = 0.18205215; 
         assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001);
 
-        double val2 = (test.getPageRank()).getPageRank(4);
+        double val2 = (test.getPageRank()).getPageRankAt(4);
         double ans2 = 0.06004535; 
         assertTrue(Math.abs(Math.abs(val2)-Math.abs(ans2)) < .0001);
 
-        double val3 = (test.getPageRank()).getPageRank(9);
+        double val3 = (test.getPageRank()).getPageRankAt(9);
         double ans3 = 0.0068027; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
 
@@ -512,15 +512,15 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-        double val1 = (test.getPageRank()).getPageRank(0); 
+        double val1 = (test.getPageRank()).getPageRankAt(0); 
         double ans1 = 0.0; 
         assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001); 
 
-        double val2 = (test.getPageRank()).getPageRank(4);
+        double val2 = (test.getPageRank()).getPageRankAt(4);
         double ans2 = 0.2450617; 
         assertTrue(Math.abs(Math.abs(val2)-Math.abs(ans2)) < .0001);
 
-        double val3 = (test.getPageRank()).getPageRank(8);
+        double val3 = (test.getPageRank()).getPageRankAt(8);
         double ans3 = 0.124691358; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
 
@@ -543,15 +543,15 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-        double val1 = (test.getPageRank()).getPageRank(0); 
+        double val1 = (test.getPageRank()).getPageRankAt(0); 
         double ans1 = 0.0897392; 
         assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001); 
 
-        double val2 = (test.getPageRank()).getPageRank(3);
+        double val2 = (test.getPageRank()).getPageRankAt(3);
         double ans2 = 0.03248299; 
         assertTrue(Math.abs(Math.abs(val2)-Math.abs(ans2)) < .0001);
 
-        double val3 = (test.getPageRank()).getPageRank(5);
+        double val3 = (test.getPageRank()).getPageRankAt(5);
         double ans3 = 0.046003401; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
 
@@ -574,7 +574,7 @@ public class GoogleHappyTest
         System.setIn(System.in);
         this.restoreStreams();
 
-        double val1 = (test.getPageRank()).getPageRank(0); 
+        double val1 = (test.getPageRank()).getPageRankAt(0); 
         double ans1 = 0.083333333; 
         assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001); 
 

@@ -25,6 +25,7 @@ public class GoogleHappy
 	private String[] names;
 	private String[] preferences;
 	private PageRank p;
+	private double pageranks;
 
 	public GoogleHappy(int tSize, int vLevel)
 	{	
