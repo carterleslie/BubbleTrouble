@@ -715,8 +715,7 @@ public class GoogleHappyTest
         assertEquals(peopleInGoogleHappy, peopleInPageRank);
     }
 
-    @Test (expected= AssertionError.class)
-    public void numNodesVsPeopleFails1() throws IOException
+    public void numNodesVsPeople4() throws IOException
     {
         this.setUpStreams();
 
@@ -725,19 +724,19 @@ public class GoogleHappyTest
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
         
-        GoogleHappy test = new GoogleHappy(2,3); 
+        GoogleHappy test = new GoogleHappy(3,3); 
         System.setIn(System.in);
         this.restoreStreams();
 
         int peopleInGoogleHappy = test.getNumPeople(); 
-        assertEquals(peopleInGoogleHappy,4);
+        assertEquals(peopleInGoogleHappy,8);
         int peopleInPageRank = test.getPageRank().getNumNodes(); 
-        assertEquals(peopleInPageRank,4);
+        assertEquals(peopleInPageRank,8);
         assertEquals(peopleInGoogleHappy, peopleInPageRank);
     }
 
     @Test (expected= AssertionError.class)
-    public void numNodesVsPeopleFails2() throws IOException
+    public void numNodesVsPeopleFails1() throws IOException
     {
         this.setUpStreams();
 
@@ -758,7 +757,7 @@ public class GoogleHappyTest
     }
 
     @Test (expected= AssertionError.class)
-    public void numNodesVsPeopleFails3() throws IOException
+    public void numNodesVsPeopleFails2() throws IOException
     {
         this.setUpStreams();
 
@@ -779,7 +778,7 @@ public class GoogleHappyTest
     }
 
     @Test (expected= AssertionError.class)
-    public void numNodesVsPeopleFails4() throws IOException
+    public void numNodesVsPeopleFails3() throws IOException
     {
         this.setUpStreams();
 
