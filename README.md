@@ -13,8 +13,11 @@ Master Story
 * 5 days - Output Adjacency Matrix (5 Quadcopters)
 * 5 days - Weight Pages (5 Quadcopters)
 * 10 days - Tests Cases (10 Quadcopters)
-Total Time Estimate = 10 days
-Current Quadcopters Total = 29/29 Quadcopters
+* 2 days - Create Linear Pagerank (5 Quadcopters)
+* 2 days - Create Non-Linear Pagerank (5 Quadcopters)
+* 3 days - Preparation & Approval of "A" Proposal (11 Quadcopters)
+Total Time Estimate = 20 days
+Current Quadcopters Total = 50/50 Quadcopters
 
 Timeline
 ==========
@@ -40,12 +43,22 @@ Week 3
 * Complete linear page rank
 * Update basic documentation: Master Story, Inception Deck, Timeline, etc.
 * Complete 10 more test cases
-* Team Contributions: Carter 60%, Abi 20%, SK 20%
+* Team Contributions: Carter 33%, Abi 33%, SK 33%
+
+Week 4
+----------
+* Update release wall and storyboard
+* Complete non-linear page rank
+* Update basic documentation: Master Story, Inception Deck, Timeline, etc.
+* Complete 10 more test cases
+* Team Contributions: Carter 33%, Abi 33%, SK 33%
 
 User Stories
 =============
 
 * As a quadcopter instructor, I want to sort my students into teams where they'll be happiest.
+
+* As a quadcopter instructor, I wish to have a choice as to how my students are ranked.
 
 Release Wall
 ==============
