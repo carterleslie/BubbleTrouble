@@ -22,11 +22,8 @@ public class PageRank {
 	    	for(int c = 0; c < people; c++)
 			{
 		   		path[r][c] = adjMatrix[r][c];
-		   		if(path[r][c] > rPrefs)
-		   			rPrefs = path[r][c];
+		   		totalPrefs[r] += path[r][c];
 			}
-			for(int i = rPrefs; i > 0; i--)
-				totalPrefs[r] += i;
 		}
 		totalRank = 1.0;
         calc();

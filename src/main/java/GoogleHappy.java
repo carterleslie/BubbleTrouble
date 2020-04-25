@@ -9,6 +9,7 @@
 ******************************************************************************/
 
 import java.util.*;
+import java.lang.Math;
 import java.util.Collection;
 import java.io.File; 
 import java.util.Scanner;
@@ -147,6 +148,6 @@ public class GoogleHappy
             }
         } 
 		GoogleHappy test = new GoogleHappy(t, v);
-		//test.printAdjacencyMatrix();
+		test.printAdjacencyMatrix();
 	}
 }
