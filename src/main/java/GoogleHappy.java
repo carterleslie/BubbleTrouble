@@ -23,6 +23,7 @@ public class GoogleHappy
 	private int verbose;
 	private int numPeople;
 	private int[][] adjacencyMatrix;
+	private int[][] pagerankMatrix;
 	private String[] names;
 	private String[] preferences;
 	private PageRank p;
@@ -51,6 +52,7 @@ public class GoogleHappy
     	else
     		teamSize = numPeople/2;
 		adjacencyMatrix = new int[numPeople][numPeople];
+		pagerankMatrix = new int[numPeople][numPeople];
 		names = new String[numPeople];
 		preferences = new String[numPeople];
 		String nameAndPrefs[] = allNamesAndPrefs.split(" ");
@@ -65,7 +67,8 @@ public class GoogleHappy
 		}
 		scanner.close();
 		fillAdjacencyMatrix();
-		p = new PageRank(adjacencyMatrix, numPeople);
+		fillPagerankMatrix();
+		p = new PageRank(pagerankMatrix, numPeople);
 	}
 
 	public void fillAdjacencyMatrix()
@@ -90,6 +93,16 @@ public class GoogleHappy
 			}
 		}
 	}
+	public void fillPagerankMatrix()
+	{
+		for(int r = 0; r < numPeople; r++)
+		{
+			for(int c = 0; c < numPeople; c++)
+			{
+				pagerankMatrix[r][c] = (int) Math.pow(adjacencyMatrix[r][c], 2);
+			}
+		}
+	}
 	public void printAdjacencyMatrix()
 	{
 		for(int r = 0; r < numPeople; r++)
@@ -97,6 +110,17 @@ public class GoogleHappy
 			for(int c = 0; c < numPeople; c++)
 			{
 				System.out.print(adjacencyMatrix[r][c] + " ");
+			}
+			System.out.println("");
+		}
+	}
+	public void printPagerankMatrix()
+	{
+		for(int r = 0; r < numPeople; r++)
+		{
+			for(int c = 0; c < numPeople; c++)
+			{
+				System.out.print(pagerankMatrix[r][c] + " ");
 			}
 			System.out.println("");
 		}
@@ -149,5 +173,7 @@ public class GoogleHappy
         } 
 		GoogleHappy test = new GoogleHappy(t, v);
 		test.printAdjacencyMatrix();
+		System.out.println("");
+		test.printPagerankMatrix();
 	}
 }

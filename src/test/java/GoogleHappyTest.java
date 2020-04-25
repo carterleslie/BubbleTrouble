@@ -384,7 +384,7 @@ public class GoogleHappyTest
         this.restoreStreams();
 
         double val = (test.getPageRank()).getTotalPageRank();
-        double ans = .83928571; 
+        double ans = .825549; 
         assertTrue(Math.abs(Math.abs(val)-Math.abs(ans)) < .0001);
     }
 
@@ -444,15 +444,15 @@ public class GoogleHappyTest
         this.restoreStreams();
 
         double val1 = (test.getPageRank()).getPageRankAt(0); 
-        double ans1 = 0.18205215; 
+        double ans1 = 0.17102787; 
         assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001);
 
         double val2 = (test.getPageRank()).getPageRankAt(4);
-        double ans2 = 0.06004535; 
+        double ans2 = 0.02031754; 
         assertTrue(Math.abs(Math.abs(val2)-Math.abs(ans2)) < .0001);
 
         double val3 = (test.getPageRank()).getPageRankAt(9);
-        double ans3 = 0.0068027; 
+        double ans3 = 0.01304190; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
     }
 
@@ -476,11 +476,11 @@ public class GoogleHappyTest
         assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001); 
 
         double val2 = (test.getPageRank()).getPageRankAt(4);
-        double ans2 = 0.2450617; 
+        double ans2 = 0.217140795; 
         assertTrue(Math.abs(Math.abs(val2)-Math.abs(ans2)) < .0001);
 
         double val3 = (test.getPageRank()).getPageRankAt(8);
-        double ans3 = 0.124691358; 
+        double ans3 = 0.090756545; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
     }
 
@@ -500,15 +500,15 @@ public class GoogleHappyTest
         this.restoreStreams();
 
         double val1 = (test.getPageRank()).getPageRankAt(0); 
-        double ans1 = 0.0897392; 
+        double ans1 = 0.0564804; 
         assertTrue(Math.abs(Math.abs(val1)-Math.abs(ans1)) < .0001); 
 
         double val2 = (test.getPageRank()).getPageRankAt(3);
-        double ans2 = 0.03248299; 
+        double ans2 = 0.0422034; 
         assertTrue(Math.abs(Math.abs(val2)-Math.abs(ans2)) < .0001);
 
         double val3 = (test.getPageRank()).getPageRankAt(5);
-        double ans3 = 0.046003401; 
+        double ans3 = 0.0277154; 
         assertTrue(Math.abs(Math.abs(val3)-Math.abs(ans3)) < .0001);
     }
 
