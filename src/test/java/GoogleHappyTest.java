@@ -881,6 +881,29 @@ public class GoogleHappyTest
         assertEquals(ans1,val1); 
     } */
 
-    //noTeams.txt can't be found?? like is doesn't pop up when typing 
+    // ^^^noTeams.txt can't be found?? like is doesn't pop up when typing 
+
+/*
+    @Test
+    public void TestFinalTotalPageRankFails() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(2,0);
+
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        double val = (test.getPageRank()).getPageRankAt(11);
+        double ans = 0.0; 
+        assertEquals(ans,val); 
+    }
+*/
+    // ^^^the test is failing?? when printing 11 it says "0.0" so idk
 
 }
