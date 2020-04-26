@@ -859,7 +859,7 @@ public class GoogleHappyTest
         int val1 = test.getTeamSize(); 
         int ans1 = 4; 
         assertEquals(ans1,val1); 
-    }
+    }*/
 
     @Test
     public void TestTeamSize5() throws IOException
@@ -879,7 +879,7 @@ public class GoogleHappyTest
         int val1 = test.getTeamSize(); 
         int ans1 = 1; 
         assertEquals(ans1,val1); 
-    } */
+    } 
 
     // ^^^noTeams.txt can't be found?? like is doesn't pop up when typing 
 
