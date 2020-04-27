@@ -288,26 +288,7 @@ public class GoogleHappyTest
         }
     }
 
-    @Test
-    public void TestTeamSize1() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("labRatsTest.txt"); 
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-
-        GoogleHappy test = new GoogleHappy(3,0);
-
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val = test.getTeamSize();
-        int ans = 3; 
-        assertEquals(ans,val);         
-    }
-
+    
     @Test
     public void TestFinalTotalPageRank1() throws IOException
     {
@@ -797,8 +778,29 @@ public class GoogleHappyTest
         assertEquals(peopleInPageRank,5);
         assertEquals(peopleInGoogleHappy, peopleInPageRank);
     }
+
     @Test
     public void TestTeamSize1() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt"); 
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+
+        GoogleHappy test = new GoogleHappy(3,0);
+
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val = test.getTeamSize();
+        int ans = 3; 
+        assertEquals(ans,val);         
+    }
+
+    @Test
+    public void TestTeamSize2() throws IOException
     {
         this.setUpStreams();
 
@@ -817,7 +819,7 @@ public class GoogleHappyTest
         assertEquals(ans1,val1); 
     }
     @Test
-    public void TestTeamSize2() throws IOException
+    public void TestTeamSize3() throws IOException
     {
         this.setUpStreams();
 
@@ -836,7 +838,7 @@ public class GoogleHappyTest
         assertEquals(ans1,val1); 
     }
     @Test
-    public void TestTeamSize3() throws IOException
+    public void TestTeamSize4() throws IOException
     {
         this.setUpStreams();
 
@@ -855,7 +857,7 @@ public class GoogleHappyTest
         assertEquals(ans1,val1); 
     }
     @Test
-    public void TestTeamSize4() throws IOException
+    public void TestTeamSize5() throws IOException
     {
         this.setUpStreams();
 
