@@ -776,6 +776,7 @@ public class GoogleHappyTest
         assertEquals(peopleInPageRank,5);
         assertEquals(peopleInGoogleHappy, peopleInPageRank);
     }
+
     @Test
     public void TestTeamSize1() throws IOException
     {
@@ -927,6 +928,7 @@ public class GoogleHappyTest
         int val1 = test.getTeamSize(); 
         int ans1 = 2; 
         assertEquals(ans1,val1); 
+
     }
     @Test (expected= AssertionError.class)
     public void TestTeamSizeFails1() throws IOException
