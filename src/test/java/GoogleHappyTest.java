@@ -228,7 +228,7 @@ public class GoogleHappyTest
    }
 
     @Test(expected= IndexOutOfBoundsException.class) 
-    public void TestRange() throws IOException
+    public void TestRange1() throws IOException
     {
         this.setUpStreams();
 
@@ -287,27 +287,6 @@ public class GoogleHappyTest
             assertEquals(0, test.getAdjacencyMatrixIndex(i, 2));
         }
     }
-
-    @Test
-    public void TestTeamSize1() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("labRatsTest.txt"); 
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-
-        GoogleHappy test = new GoogleHappy(3,0);
-
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val = test.getTeamSize();
-        int ans = 3; 
-        assertEquals(ans,val);         
-    }
-
     @Test
     public void TestFinalTotalPageRank1() throws IOException
     {
@@ -802,22 +781,41 @@ public class GoogleHappyTest
     {
         this.setUpStreams();
 
+        File inputFile = new File("labRatsTest.txt"); 
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+
+        GoogleHappy test = new GoogleHappy(2,0);
+
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val = test.getTeamSize();
+        int ans = 2; 
+        assertEquals(ans,val);         
+    }
+    @Test
+    public void TestTeamSize2() throws IOException
+    {
+        this.setUpStreams();
+
         File inputFile = new File("suiteLifeTest.txt");
         
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
         
-        GoogleHappy test = new GoogleHappy(5,0); 
+        GoogleHappy test = new GoogleHappy(3,0); 
         
         System.setIn(System.in);
         this.restoreStreams();
 
         int val1 = test.getTeamSize(); 
-        int ans1 = 4; 
+        int ans1 = 3; 
         assertEquals(ans1,val1); 
     }
     @Test
-    public void TestTeamSize2() throws IOException
+    public void TestTeamSize3() throws IOException
     {
         this.setUpStreams();
 
@@ -826,26 +824,7 @@ public class GoogleHappyTest
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
         
-        GoogleHappy test = new GoogleHappy(7,0); // is the 7 wrong? 
-        
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        int val1 = test.getTeamSize(); 
-        int ans1 = 6; 
-        assertEquals(ans1,val1); 
-    }
-    @Test
-    public void TestTeamSize3() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("suiteLifeTest.txt");
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-        
-        GoogleHappy test = new GoogleHappy(4,0); 
+        GoogleHappy test = new GoogleHappy(4,0);
         
         System.setIn(System.in);
         this.restoreStreams();
@@ -859,7 +838,83 @@ public class GoogleHappyTest
     {
         this.setUpStreams();
 
-        File inputFile = new File("noTeams.txt");
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(6,0); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getTeamSize(); 
+        int ans1 = 6; 
+        assertEquals(ans1,val1); 
+    }
+    @Test
+    public void TestTeamSizeReduces() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(7,0); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getTeamSize(); 
+        int ans1 = 6; 
+        assertEquals(ans1,val1); 
+    }
+    @Test
+    public void TestTeamSizeReduces2() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(7,0); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getTeamSize(); 
+        int ans1 = 4; 
+        assertEquals(ans1,val1); 
+    }
+    @Test
+    public void TestTeamSizeExpands1() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("labRatsTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(1,0); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getTeamSize(); 
+        int ans1 = 2; 
+        assertEquals(ans1,val1); 
+    }
+    @Test
+    public void TestTeamSizeExpands2() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
         
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
@@ -872,5 +927,43 @@ public class GoogleHappyTest
         int val1 = test.getTeamSize(); 
         int ans1 = 2; 
         assertEquals(ans1,val1); 
-    }  
+    }
+    @Test (expected= AssertionError.class)
+    public void TestTeamSizeFails1() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(7,0); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getTeamSize(); 
+        int ans1 = 7; 
+        assertEquals(ans1,val1); 
+    }
+    @Test (expected= AssertionError.class)
+    public void TestTeamSizeFails2() throws IOException
+    {
+        this.setUpStreams();
+
+        File inputFile = new File("suiteLifeTest.txt");
+        
+        InputStream targetStream = new FileInputStream(inputFile);
+        System.setIn(targetStream);
+        
+        GoogleHappy test = new GoogleHappy(1,0); 
+        
+        System.setIn(System.in);
+        this.restoreStreams();
+
+        int val1 = test.getTeamSize(); 
+        int ans1 = 1; 
+        assertEquals(ans1,val1); 
+    }
 }
