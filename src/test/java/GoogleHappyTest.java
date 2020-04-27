@@ -93,7 +93,7 @@ public class GoogleHappyTest
         //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
         //but eventually it will. Feel free to remove these for now            
         
-    }
+    }*/
 
    @Test
     public void TestZeroPreferences() throws IOException 
@@ -796,9 +796,9 @@ public class GoogleHappyTest
         int peopleInPageRank = test.getPageRank().getNumNodes(); 
         assertEquals(peopleInPageRank,5);
         assertEquals(peopleInGoogleHappy, peopleInPageRank);
-    }*/
-@Test
-    public void TestTeamSize2() throws IOException
+    }
+    @Test
+    public void TestTeamSize1() throws IOException
     {
         this.setUpStreams();
 
@@ -816,9 +816,8 @@ public class GoogleHappyTest
         int ans1 = 4; 
         assertEquals(ans1,val1); 
     }
-/*
     @Test
-    public void TestTeamSize3() throws IOException
+    public void TestTeamSize2() throws IOException
     {
         this.setUpStreams();
 
@@ -833,16 +832,11 @@ public class GoogleHappyTest
         this.restoreStreams();
 
         int val1 = test.getTeamSize(); 
-        int ans1 = 3; 
+        int ans1 = 6; 
         assertEquals(ans1,val1); 
     }
-
-    // Help Errors 
-
-    // Is this what you mean?? Should I expect an error for team size 2?? 
-    // Or is it supposed to change to the right size? 
-@Test (expected= AssertionError.class)
-    public void TestTeamSize4() throws IOException
+    @Test
+    public void TestTeamSize3() throws IOException
     {
         this.setUpStreams();
 
@@ -851,7 +845,7 @@ public class GoogleHappyTest
         InputStream targetStream = new FileInputStream(inputFile);
         System.setIn(targetStream);
         
-        GoogleHappy test = new GoogleHappy(2,0); 
+        GoogleHappy test = new GoogleHappy(4,0); 
         
         System.setIn(System.in);
         this.restoreStreams();
@@ -859,10 +853,9 @@ public class GoogleHappyTest
         int val1 = test.getTeamSize(); 
         int ans1 = 4; 
         assertEquals(ans1,val1); 
-    }*/
-
+    }
     @Test
-    public void TestTeamSize5() throws IOException
+    public void TestTeamSize4() throws IOException
     {
         this.setUpStreams();
 
@@ -877,33 +870,7 @@ public class GoogleHappyTest
         this.restoreStreams();
 
         int val1 = test.getTeamSize(); 
-        int ans1 = 1; 
+        int ans1 = 2; 
         assertEquals(ans1,val1); 
-    } 
-
-    // ^^^noTeams.txt can't be found?? like is doesn't pop up when typing 
-
-/*
-    @Test
-    public void TestFinalTotalPageRankFails() throws IOException
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("labRatsTest.txt");
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-        
-        GoogleHappy test = new GoogleHappy(2,0);
-
-        System.setIn(System.in);
-        this.restoreStreams();
-
-        double val = (test.getPageRank()).getPageRankAt(11);
-        double ans = 0.0; 
-        assertEquals(ans,val); 
-    }
-*/
-    // ^^^the test is failing?? when printing 11 it says "0.0" so idk
-
+    }  
 }
