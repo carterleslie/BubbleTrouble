@@ -874,5 +874,26 @@ public class GoogleHappyTest
         int val1 = test.getTeamSize(); 
         int ans1 = 2; 
         assertEquals(ans1,val1); 
-    }  
-}
+    } 
+
+//      @Test
+//     public void PageRankZeroTest() throws IOException
+//     {
+//         this.setUpStreams();
+
+//         File inputFile = new File("labRatsTest.txt");
+        
+//         InputStream targetStream = new FileInputStream(inputFile);
+//         System.setIn(targetStream);
+        
+//         GoogleHappy test = new GoogleHappy(2,0);
+
+//         System.setIn(System.in);
+//         this.restoreStreams();
+
+//         double val = (test.getPageRank()).getPageRankAt(11);
+//         double ans = 0.0; 
+//         assertEquals(ans,val); 
+//     } 
+    //I've printed out the getPageRankAt 11 and it gives me 0.0 so I'm confused!!
+ }
