@@ -10,6 +10,17 @@ General terms
 **Individual Happiness:** The happiness rate of each individual in a team. <br />
 **Team Happiness:** The overall score of the total happiness of a team. <br />
 **Class size:** Class size refers to the number of students per class, before students are divided into groups. </br>
+**Preferences:** wanting to work with one person over another. </br>
+**Corretness:** the quality or state of being free from error; accuracy. </br>
+**Matrix:** a rectangular array of quantities or expressions in rows and columns that is treated as a single entity and manipulated according to particular rules. </br>
+**Range:** the area of variation between upper and lower limits of the matrix. </br>
+**Unpopularity:** the state or condition of not being wanted as someones preference. </br>
+**PageRank:** </br>
+**Verbose:** </br>
+**Nodes:** </br>
+**Fibonacci:** The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... The next number is found by adding up the two numbers before it. <br />
+**PolynomialPower:** </br>
+**Recaman:** </br>
 
 Important Functions
 --------------------
