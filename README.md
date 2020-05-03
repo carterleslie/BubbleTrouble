@@ -47,6 +47,14 @@ Week 3
 * Complete 10 more test cases
 * Team Contributions: Carter 33%, Abi 33%, SK 33%
 
+Week 4
+----------
+* Update release wall and storyboard
+* Submit "A" Proposal
+* Update basic documentation: Master Story, Inception Deck, Timeline, etc.
+* Complete 10 more test cases
+* Team Contributions: Carter 33%, Abi 33%, SK 33%
+
 Week 5
 ----------
 * Update release wall and storyboard
