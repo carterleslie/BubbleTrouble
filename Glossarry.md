@@ -1,9 +1,6 @@
 #Glossary
 ==========
 
-<<<<<<< Updated upstream
-* Currently under construction (:
-=======
 General terms
 -------------
 **Person:** A person is any name inputted in the file that is tied to their preferences. <br />
