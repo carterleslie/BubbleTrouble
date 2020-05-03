@@ -29,8 +29,6 @@ Important Functions
 ```calcTeamHappiness()``` This calculates the total happiness of each team. </br >
 ```calcTotalHappiness()``` Calculates the total happiness of everyone in a class. </br >
 ```calcAllHappiness()``` Calls all happiness functions so that they can all be called simultaneously rather than having to all be called implicitly. </br >
-```swapPeople()``` Swaps two people so that they both end up in the position of the other after the swap. </br >
-```makeBestTeams()``` Makes the best teams, up to the number the user specified, and returns all of the best teams. </br >
 ```printTeams() ``` Prints the names of everyone in each team, their team number, and their team happiness. </br >
 
 Test Functions
