@@ -35,6 +35,30 @@ Important Functions
 
 Test Functions
 ---------
+```TestZeroPreferences() ``` </br >
+```TestDiagonalZeros()``` </br >
+```TestCorretnessOfMatrix x()``` </br >
+```TestRange()``` </br >
+```TestUnpopularity()``` </br >
+```TestFinalTotalPageRank x()``` </br >
+```TestFinalTotalPageRankLessThanOne x()``` </br >
+```TestFinalIndividualPageRank x()``` </br >
+```TestVerbose()``` </br >
+```TestNumNodesVsPeople x()``` </br >
+```TestNumNodesVsPeopleFails x()``` </br >
+```TestTeamSize x()``` </br >
+```TestTeamSizeReduces x()``` </br >
+```TestTeamSizeExpands x()``` </br >
+```TestTeamSizeFails x()``` </br >
+```TestPolynomialPowerOf x()``` </br >
+```TestSequenceFibonacci()``` </br >
+```TestSequenceRecaman()``` </br >
+```TestSequencePasccal()``` </br >
+```TestSequenceOverridePolynomial()``` </br >
+```TestIndividualHappiness()``` </br >
+```TestTeamHappiness()``` </br >
+```TestTotalHappiness()``` </br >
+
 ```testInizializer()``` This function tests to make sure that the FELiXGang class is initialized correctly depending on the class size with a constant number of teams and team size. </br >
 ```testFillMatrix()```  This function checks to make sure that each person is in a team matrix is at the index they are supposed to be when initially filled. </br >
 ```testHappiness()``` This function tests the happiness of both an individual and a team, and makes sure the value is what it is supposed to be. </br >
