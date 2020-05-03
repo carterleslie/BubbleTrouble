@@ -3,44 +3,47 @@
 
 General terms
 -------------
-**Person:** A person is any name inputted in the file that is tied to their preferences. <br />
-**Team:** A team consists of at least two people and at max half the class size. <br />
+**Person:** A person is any name inputted in the file that is tied to their preferences. Person i would be located at names[i] in the names array. <br />
+**Team:** A team consists of at least two people or at max half the class size. <br />
 **Happy Team(s):** Teams in which the majority of members are happy to be a part of. <br />
 **Happiness:** Happiness is how satisfied or dissatisfied a person is with all of their team members. May be positive or negative depending on if the person wants or does not want to be on a team with their teammate. It is specified in the file if the person wants or does not want to be on a team with other people. <br />
 **Individual Happiness:** The happiness rate of each individual in a team. <br />
 **Team Happiness:** The overall score of the total happiness of a team. <br />
-**Class size:** Class size refers to the number of students per class, before students are divided into groups. </br>
-**Preferences:** wanting to work with one person over another. </br>
-**Corretness:** the quality or state of being free from error; accuracy. </br>
-**Matrix:** a rectangular array of quantities or expressions in rows and columns that is treated as a single entity and manipulated according to particular rules. </br>
-**Range:** the area of variation between upper and lower limits of the matrix. </br>
-**Unpopularity:** the state or condition of not being wanted as someones preference. </br>
-**PageRank:** the pagerank of a person, which is determined by how many people they are pointing to and how many popular people are pointing to them. </br>
-**Verbose:** the level of d.ing desired for the running of the code. </br>
-**Nodes:** each individual person is known as a Node in the pagerank. </br>
+**Number of people:** Number of people refers to the number of students per class, before students are divided into groups. </br>
+**Preferences:** Wanting to work with one person over another. </br>
+**Corretness:** The quality or state of being free from error; accuracy. </br>
+**Matrix:** A rectangular array of quantities or expressions in rows and columns that is treated as a single entity and manipulated according to particular rules. </br>
+**Range:** The area of variation between upper and lower limits of the matrix. </br>
+**Unpopularity:** The state or condition of not being wanted as someones preference. </br>
+**PageRank:** The pagerank of a person, which is determined by how many people they are pointing to and how many popular people are pointing to them. </br>
+**Verbose:** The level of d.ing desired for the running of the code. </br>
+**Nodes:** Each individual person is known as a Node in the pagerank. </br>
 **Fibonacci:** The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... The next number is found by adding up the two numbers before it. <br/>
-**Polynomial Power:** if x is raised to the p, then p is the polynomial power. </br>
+**Polynomial Power:** If x is raised to the p, then p is the polynomial power. </br>
 **Recaman:** Recaman is the mathematician who created the Recaman sequence, which is used in this project to alter the numbers used by pagerank</br>
-**Linear:** follows the polynomial power of x to the power of p where p = 1. </br>
-**Non-Linear:** follows the polynomial power of x to the power of p where p > 1. </br>
+**Linear:** Follows the polynomial power of x to the power of p where p = 1. </br>
+**Non-Linear:** Follows the polynomial power of x to the power of p where p > 1. </br>
+**AdjacencyMatrix:** A matrix in which a person located at names[r] corresponds to row r in the matrix. Row r will contain a 0-6 depending on how much they want someone on their team, the higher the number the more they want this person to be on their team.
 
 Important Functions
 --------------------
-```fillTeams()``` The this functions takes a document (string), containing the names of everyone. The function then divides the individuals into teams, the ```teamsMatrix``` array, and puts all their preferences into the ```prefsMatrix``` array. If there are few people, the function will fill the end columns in the matrix with "null" to represent a fake, placeholder person. </br >
-```calcIndividualHappiness()``` Calculates the happiness for each person, and stores it in the individual happiness array. Can be positive or negative. This is because an individuals happiness can go up or down depending on if they wanted to be on a team with someone. This is shown by putting a positive id in the preferences, meaning they want to be on a team with them, or by putting a negative of the person they don't like's id, showing that they don't want to be on a team with them. </br >
+```createTeams()``` This function creates teams according to the pagerank ordering. The way we did this is by giving the highest ranked person their first available choice, and then the next highest ranked person their first available choice, and so on until each team has two members. Then we go through and give each person that was added to the most recent row their first available choice.  </br >
+```calcIndividualHappiness()``` Calculates the happiness for each person, and stores it in the individual happiness array. </br >
 ```calcTeamHappiness()``` This calculates the total happiness of each team. </br >
-```calcTotalHappiness()``` Calculates the total happiness of everyone in a class. </br >
+```calcTotalHappiness()``` Calculates the total happiness of everyone throughout all teams. </br >
 ```calcAllHappiness()``` Calls all happiness functions so that they can all be called simultaneously rather than having to all be called implicitly. </br >
-```printTeams() ``` Prints the names of everyone in each team, their team number, and their team happiness. </br >
+```printTeams()``` Prints the names of everyone in each team, their team number, their team happiness, the total happiness, and the number of people who got their [first choice, second choice,.., someone who was not their choice]. </br >
+```fillAdjacencyMatrix()``` This function fills the adjacencyMatrix. 
+```fillPagerankMatrix()``` This function fills the pagerank matrix which applies either a polynomial power or a sequence number to every index to adjacencyMatrix.
 
 Test Functions
 ---------
 ```testInizializer()``` This function tests to make sure that the FELiXGang class is initialized correctly depending on the class size with a constant number of teams and team size. </br >
 ```testFillMatrix()```  This function checks to make sure that each person is in a team matrix is at the index they are supposed to be when initially filled. </br >
 ```testHappiness()``` This function tests the happiness of both an individual and a team, and makes sure the value is what it is supposed to be. </br >
-```testSwap()```  After team members are swapped, this test checks to see if the members swapped are at the correct index. </br >
+```testSwap()``` After team members are swapped, this test checks to see if the members swapped are at the correct index. </br >
 ```testSwapHappiness()``` This checks the happiness of each member swapped to make sure that their happiness changed. </br >
-```testNegativeHappy()```Checks to see if a persons or team's happiness is negative.  </br >
+```testNegativeHappy()``` Checks to see if a persons or team's happiness is negative.  </br >
 ```testTotalHappiness()``` This tests the total happiness of the class. </br >
 ```testTotalHappinessSwap()``` Checks the total happines of the class after some team members have been swapped. </br >
 ```testBest()``` Checks to see if all of the sets our program created are better than 0. </br >
