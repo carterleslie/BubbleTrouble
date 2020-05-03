@@ -12,12 +12,14 @@ Master Story
 * 5 days - User Stories (3 Quadcopters)
 * 5 days - Output Adjacency Matrix (5 Quadcopters)
 * 5 days - Weight Pages (5 Quadcopters)
-* 10 days - Tests Cases (10 Quadcopters)
+* 10 days - 50 Total Tests Cases (50 Quadcopters)
 * 2 days - Create Linear Pagerank (5 Quadcopters)
 * 2 days - Create Non-Linear Pagerank (5 Quadcopters)
 * 3 days - Preparation & Approval of "A" Proposal (11 Quadcopters)
-Total Time Estimate = 20 days
-Current Quadcopters Total = 50/50 Quadcopters
+* 3 days - Completed "A" Proposal (10 Quadcopters)
+* 1 day - Create Teams (10 Quadcopters)
+Total Time Estimate = 35 days
+Current Quadcopters Total = 110/110 Quadcopters
 
 Timeline
 ==========
@@ -45,10 +47,11 @@ Week 3
 * Complete 10 more test cases
 * Team Contributions: Carter 33%, Abi 33%, SK 33%
 
-Week 4
+Week 5
 ----------
 * Update release wall and storyboard
-* Complete non-linear page rank
+* Complete "A" Proposal
+* Sort students into teams
 * Update basic documentation: Master Story, Inception Deck, Timeline, etc.
 * Complete 10 more test cases
 * Team Contributions: Carter 33%, Abi 33%, SK 33%
