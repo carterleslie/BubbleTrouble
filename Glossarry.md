@@ -15,12 +15,14 @@ General terms
 **Matrix:** a rectangular array of quantities or expressions in rows and columns that is treated as a single entity and manipulated according to particular rules. </br>
 **Range:** the area of variation between upper and lower limits of the matrix. </br>
 **Unpopularity:** the state or condition of not being wanted as someones preference. </br>
-**PageRank:** </br>
-**Verbose:** </br>
-**Nodes:** </br>
-**Fibonacci:** The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... The next number is found by adding up the two numbers before it. <br />
-**PolynomialPower:** </br>
-**Recaman:** </br>
+**PageRank:** the pagerank of a person, which is determined by how many people they are pointing to and how many popular people are pointing to them. </br>
+**Verbose:** the level of d.ing desired for the running of the code. </br>
+**Nodes:** each individual person is known as a Node in the pagerank. </br>
+**Fibonacci:** The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... The next number is found by adding up the two numbers before it. <br/>
+**Polynomial Power:** if x is raised to the p, then p is the polynomial power. </br>
+**Recaman:** Recaman is the mathematician who created the Recaman sequence, which is used in this project to alter the numbers used by pagerank</br>
+**Linear:** follows the polynomial power of x to the power of p where p = 1. </br>
+**Non-Linear:** follows the polynomial power of x to the power of p where p > 1. </br>
 
 Important Functions
 --------------------
@@ -51,4 +53,3 @@ Test Functions
 ```testPrefsMatrixIndex``` Tests to see if the preferences are in the right place. </br >
 ```testGetIDMatrixIndex``` Tests to make sure the ID's in the ID matrix are correct. </br >
 ```testGetIDMatrixIndexWrong()``` Tests to see if calling an ID outside the ID matrix causes an error. </br >
->>>>>>> Stashed changes
