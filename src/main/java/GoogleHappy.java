@@ -19,28 +19,27 @@ import java.util.Random;
 
 public class GoogleHappy 
 {
-	private int teamSize;
-	private int verbose;
-	private int powerKey;
-	private char sequenceKey;
-	private int numPeople;
-	private int numTeams;
-	private String[][] teamsMatrix;
+	private int teamSize; //the size teams need to be
+	private int verbose; //the verbose level
+	private int powerKey; //the power key
+	private char sequenceKey; //the sequence key
+	private int numPeople; //the number of people
+	private int numTeams; //the number of teams
+	private String[][] teamsMatrix; //holds the actual teams, people on column c are on the same team
 	private int[][] individualHappinessMatrix; //holds the happiness of person teamsMatrix[r][c] in it's own [r][c] position
 	private int[] teamHappiness; //holds total team happiness of team teamsMatrix[r][0-teamSize] in it's own [r] position
-	private int totalHappiness;
-	private int[][] adjacencyMatrix;
-	private int[][] pagerankMatrix;
-	private String[] names;
-	private int[] maxPrefs;
-	private String[] preferences;
-	private PageRank p;
-	private double pageranks;
-	private Set<String> usedNames;
-	private int[] happinessIndex;
-	private int[] choicesGot;
+	private int totalHappiness; //the total happiness of the teams
+	private int[][] adjacencyMatrix; //holds the preferences for person r at adjacencyMatrix[r][0-numPeople]
+	private int[][] pagerankMatrix; //the matrix used for storing the values for use in pagerank calculation, either polynomial or sequential
+	private String[] names; //holds all the names of the people in the order they are read in
+	private int[] maxPrefs;//holds the max number of prefs for each person in names, parallel to names
+	private String[] preferences; //holds preferences of a person for a short time
+	private PageRank p; //the pagerank containing the code for a pagerank
+	private Set<String> usedNames; //a set used to hold all the names that have already been added to a team
+	private int[] happinessIndex; //index of happiness to be added to their happiness
+	private int[] choicesGot; //the number of {1st choices, 2nd choices,.., not one of their choices}
 
-	public GoogleHappy(int tSize, int vLevel, int pow, char seq)
+	public GoogleHappy(int tSize, int vLevel, int pow, char seq) //creates a GoogleHappy
 	{	
 		if(vLevel <= 4 && vLevel >= 0)
     		verbose = vLevel;
@@ -99,7 +98,7 @@ public class GoogleHappy
 		createTeams();
 		calcAllHappiness();
 	}
-	public void fillAdjacencyMatrix()
+	public void fillAdjacencyMatrix() //fills adjacency matrix
 	{
 		int prefNum;
 		String[] prefs;
@@ -123,7 +122,7 @@ public class GoogleHappy
 		}
 		log(2);
 	}
-	public void fillPagerankMatrix()
+	public void fillPagerankMatrix() //fills the matrix used to calculate pagerank with numbers, applies polynomial or a sequence
 	{
 		for(int r = 0; r < numPeople; r++)
 		{
@@ -139,7 +138,7 @@ public class GoogleHappy
 		}
 		log(3);
 	}
-	public int useSequence(char seqKey, int prefNum)
+	public int useSequence(char seqKey, int prefNum) //uses the sequence specified by seqKey
 	{
 		if(seqKey == 'f')
 			return fibonacci(prefNum);
@@ -149,13 +148,13 @@ public class GoogleHappy
 			return pascal(prefNum);
 		return prefNum;
 	}
-	public int fibonacci(int num)
+	public int fibonacci(int num) //finds the numth fibonacci number
 	{
 		if(num <= 1)
 			return num;
 		return fibonacci(num - 1) + fibonacci(num - 2);
 	}
-	public int recaman(int num)
+	public int recaman(int num) //finds the numth recaman number
 	{
 		if(num == 0)
 			return 0;
@@ -171,7 +170,7 @@ public class GoogleHappy
 			return 7;
 		return 13;
 	}
-	public int pascal(int num)
+	public int pascal(int num) //finds the numth highest number in pascals triangle
 	{
 		if(num == 0)
 			return 0;
@@ -187,7 +186,7 @@ public class GoogleHappy
 			return 10;
 		return 20;
 	}
-	private void log(int vLevel)
+	private void log(int vLevel) //handles the debugging of the code
     {
     	StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
     	String caller = stackTrace[2].getMethodName();
@@ -200,7 +199,7 @@ public class GoogleHappy
     	else if(vLevel <= verbose && vLevel == 1) //verbose of 1 output
     		System.out.println("Printed teams in method: "+caller);
     }
-	public void createTeams()
+	public void createTeams() //creates teams accoding to who has the most pagerank and their most preferred choice
 	{
 		for(int r = 0; r < teamSize-1; r++)
 		{
@@ -247,7 +246,7 @@ public class GoogleHappy
 						usedNames.add(names[prIndex]);
 					}
 				}
-				else//we will be adding the next person based of the highest pref off the last person added to the team
+				else
 				{
 					String baseName = teamsMatrix[r][c];
 					int baseNameIndex = -1;
@@ -292,7 +291,7 @@ public class GoogleHappy
 		}
 		log(4);
 	}
-	private void calcIndividualHappiness()
+	private void calcIndividualHappiness() //calculates individual happiness of the people in the teams matrix
 	{
 		for(int c = 0; c < numTeams; c++)
 		{
@@ -329,8 +328,7 @@ public class GoogleHappy
 			}	
 		}
 	}
-	//Gauges the happiness of each team.
-	private void calcTeamHappiness()
+	private void calcTeamHappiness() //Gauges the happiness of each team.
 	{
 		int happiness = 0;
 		for(int c = 0; c < numTeams; c++)
@@ -346,8 +344,7 @@ public class GoogleHappy
 			teamHappiness[c] = happiness;
 		}
 	}
-	//calculates the total happiness of the set
-	private void calcTotalHappiness()
+	private void calcTotalHappiness() //calculates the total happiness of the set
 	{
 		totalHappiness = 0;
 		for(int c = 0; c < numTeams; c++)
@@ -355,14 +352,13 @@ public class GoogleHappy
 			totalHappiness += teamHappiness[c];
 		}
 	}
-	//calls all calcXHappiness() functions in order to get the new happiness of the set
-	private void calcAllHappiness()
+	private void calcAllHappiness() //calls all calcXHappiness() functions in order to get the new happiness of the set
 	{
 		calcIndividualHappiness();
 		calcTeamHappiness();
 		calcTotalHappiness();
 	}
-	public void printAdjacencyMatrix()
+	public void printAdjacencyMatrix() //prints adjacencyMatrix
 	{
 		for(int r = 0; r < numPeople; r++)
 		{
@@ -373,7 +369,7 @@ public class GoogleHappy
 			System.out.println("");
 		}
 	}
-	public void printPagerankMatrix()
+	public void printPagerankMatrix() //prints pagerankMatrix
 	{
 		for(int r = 0; r < numPeople; r++)
 		{
@@ -384,7 +380,7 @@ public class GoogleHappy
 			System.out.println("");
 		}
 	}
-	public void printTeams() 
+	public void printTeams() //prints the teams formatted with the number of 1st choices, 2nd choices, and 3rd choices
 	{
 		System.out.println("Pagerank Teams (" + totalHappiness + ", " + choicesGot[0] + ", " + choicesGot[1] + ", " + choicesGot[2] + ", " + choicesGot[3] + ", " + choicesGot[4] + ", " + choicesGot[5] + ", " + choicesGot[6] +")");
 		for (int c = 0; c < numTeams; c++) 
@@ -405,35 +401,35 @@ public class GoogleHappy
 		}
 		log(1);
 	}
-	public int getAdjacencyMatrixIndex(int r, int c)
+	public int getAdjacencyMatrixIndex(int r, int c) //gets the index of the adjacency matrix
 	{
 		return adjacencyMatrix[r][c];
 	}
-	public int getNumPeople()
+	public int getNumPeople() //gets the number of people
 	{
 		return numPeople;
 	}
-	public int getTeamSize()
+	public int getTeamSize() //gets the team size
 	{
 		return teamSize;
 	}
-	public int getVerboseLevel()
+	public int getVerboseLevel() //gets the verbose level
 	{
 		return verbose;
 	}
-	public PageRank getPageRank()
+	public PageRank getPageRank() //gets the pagerank object
 	{
 		return p;
 	}
-	public int getIndividualHappiness(int r, int c)
+	public int getIndividualHappiness(int r, int c) //gets the individual happiness at r,c
 	{
 		return individualHappinessMatrix[r][c];
 	}
-	public int getTeamHappiness(int index)
+	public int getTeamHappiness(int index) //gets the team happiness at index
 	{
 		return teamHappiness[index];
 	}
-	public int getTotalHappiness()
+	public int getTotalHappiness() //gets the total happiness
 	{
 		return totalHappiness;
 	}
@@ -482,9 +478,7 @@ public class GoogleHappy
             }
         } 
 		GoogleHappy test = new GoogleHappy(t, v, p, s);
-		test.printAdjacencyMatrix();
 		System.out.println("");
-		test.printPagerankMatrix();
 		test.printTeams();
 	}
 }

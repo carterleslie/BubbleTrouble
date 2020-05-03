@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.io.File; 
 import java.util.Scanner;
 import java.io.FileNotFoundException;
-// import java.io.IndexOutOfBoundsException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.*;
@@ -66,34 +65,6 @@ public class GoogleHappyTest
     public static void setUpBeforeClass() throws Exception 
     {
     }
-    /*
-    @Test
-    public void ExampleTest() throws IOException 
-    {
-        this.setUpStreams();
-
-        File inputFile = new File("adjacencyTest.txt"); //put file name here that you want to input from
-        
-        InputStream targetStream = new FileInputStream(inputFile);
-        System.setIn(targetStream);
-    	
-        // now call main
-        //GoogleHappy.main( new String[] {"Yes", "v", "4"} ); //sends in these variables to args of the main
-        GoogleHappy test = new GoogleHappy(); //creating a GoogleHappy
-    	
-        // reset back to normal stdin, anything you print now will show up when running mvn test
-        System.setIn(System.in);
-        this.restoreStreams();
-
-    	test.printAdjacencyMatrix(); //printing the adjacencyMatrix of test, this only works if after the prev 2 lines
-
-        String outs = outContent.toString();  
-        System.out.println(outs);            
-        //These two lines print the output which was output by the GoogleHappy test,
-        //it doesn't need to be in every/shouldn't be in most test cases. Right now it prints nothing
-        //but eventually it will. Feel free to remove these for now            
-        
-    }*/
 
    @Test
     public void TestZeroPreferences() throws IOException 

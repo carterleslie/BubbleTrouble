@@ -1,0 +1,23 @@
+How to Test our A Proposal:
+
+Adding "-p" followed by a number specifies the power we are going to raise our values to when doing pagerank,
+so if someone made 4 choices and the input for power was "-p 2" pagerank would see it as [16, 9, 4, 1] rather than [4, 3, 2, 1].
+
+Adding "-s" followed by one of 'f' for fibonacci sequence, 'r' for Receman's sequence, or 'p' for Pascals trianlge will invoke
+pagerank to use those sequences instead of using the power of p. If a sequence is successfully inputted, it will override whatever
+power is inputted because it's harder to accidentally input a sequence than a polynomial. So, if someone chose "-s p" and made 6 choices
+the pagerank would see [20, 10, 6, 3, 2, 1] instead of [6, 5, 4, 3, 2, 1].
+
+Sample test prompts(place what is between double quotes between the correct test directory and input file, add other commands if you wish):
+
+Test to see if "-p" works: 
+"-p 0"  (should make pagerank x^1 by default)
+"-p 1"  (should make pagerank x^1)
+"-p 2"  (should make pagerank x^2)
+"-p 3"  (should make pagerank x^3)
+
+Test to see if "-s" works: 
+"-s f"  (should make pagerank fibonacci sequence)
+"-s r"  (should make pagerank Recaman's sequence)
+"-s p"  (should make pagerank Pascal's triangle)
+"-s f -p 2"  (should make pagerank fibonacci sequence and override "-p 2")

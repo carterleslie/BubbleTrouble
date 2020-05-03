@@ -40,24 +40,14 @@ public class PageRank {
 		int ITERATION_STEP=1;
 
 		InitialPageRank = 1/((double) numNodes);
-		/*System.out.printf("Total Number of Nodes :"+(int) numNodes+"\t Initial PageRank  of All Nodes :"+InitialPageRank+"\n");
-	    System.out.println("Total pagerank:"+totalRank);*/
 
-		// 0th ITERATION  _ OR _ INITIALIZATION PHASE
 		for(int i=0; i < numNodes; i++)
 		{
 			this.pagerank[i]=InitialPageRank;
 		}   
-	  
-		/*System.out.printf("\n Initial PageRank Values , 0th Step \n");
-		for(int i=0; i < numNodes; i++)
-		{
-			System.out.printf(" Page Rank of "+ (i+1) +" is :\t"+this.pagerank[i]+"\n");
-		}  */
 	  	calcTotalRank();
 		while(ITERATION_STEP<=2) // Iterations
 		{
-			// Store the PageRank for All Nodes in Temporary Array 
 			for(int i=0; i < numNodes; i++)
 			{  
 				TempPageRank[i]=this.pagerank[i];
@@ -69,35 +59,15 @@ public class PageRank {
 				for(int r = 0; r < numNodes; r++)
 				{
 					if(this.path[r][c] >= 1)
-					{ 
-						// Calculate PageRank     
+					{    
 						this.pagerank[c] += TempPageRank[r]*((double) path[r][c] / totalPrefs[r]);    
 					}
-				}
-				//System.out.println("Interation "+c+":"+pagerank[3]);  
+				}  
 			}    
-	     
-			/*System.out.printf("\n After "+ITERATION_STEP+"th Step \n");
-	  
-			for(int i=0; i < numNodes; i++) 
-			    System.out.printf(" Page Rank of "+(i+1)+" is :\t"+this.pagerank[i]+"\n"); */
 			calcTotalRank();
 	  
 			ITERATION_STEP = ITERATION_STEP+1;
 		}
-
-		/* Add the Damping Factor to PageRank
-		for(int i=0; i < numNodes; i++)
-		{
-			this.pagerank[i]=(1-DampingFactor)+ DampingFactor*this.pagerank[i]; 
-		} */
-	  
-		/* Display PageRank
-		System.out.printf("\n Final Page Rank : \n"); 
-		for(int i=0; i < numNodes; i++)
-		{
-			System.out.printf(" Page Rank of "+(i+1)+" is :\t"+this.pagerank[i]+"\n"); 
-		}*/
 		calcTotalRank();
 	}    
 	public double getPageRankAt(int index)
@@ -117,6 +87,5 @@ public class PageRank {
 		totalRank = 0;
 		for(int i=0; i < numNodes; i++) 
 			totalRank += pagerank[i];
-		//System.out.println("Page Rank total for this iteration: "+totalRank);
 	}
 }
