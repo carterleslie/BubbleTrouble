@@ -45,7 +45,7 @@ Week 3
 * Complete linear page rank
 * Update basic documentation: Master Story, Inception Deck, Timeline, etc.
 * Complete 10 more test cases
-* Team Contributions: Carter 33%, Abi 33%, SK 33%
+* Team Contributions: Carter 60%, Abi 20%, SK 20%
 
 Week 4
 ----------
@@ -53,7 +53,7 @@ Week 4
 * Submit "A" Proposal
 * Update basic documentation: Master Story, Inception Deck, Timeline, etc.
 * Complete 10 more test cases
-* Team Contributions: Carter 33%, Abi 33%, SK 33%
+* Team Contributions: Carter 50%, Abi 25%, SK 25%
 
 Week 5
 ----------
