@@ -1,5 +1,5 @@
-# How to Run
-===============
+How to Run
+=============
 
 1. git clone https://github.com/caleslie00/BubbleTrouble.git
 2. One you have the clone, you must go into src > main > java and compile GoogleHappy.java with java. For example, with the terminal, do "javac GoogleHappy.java"
